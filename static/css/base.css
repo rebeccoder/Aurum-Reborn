@@ -14,24 +14,36 @@ body {
     
 }
 
+.delivery-banner {
+    font-family: 'Playfair', serif;
+    background-color: #CDA3A3;
+    color: #FFFFF0;
+}
 .searchbar {
     font-family: 'Playfair', serif;
 }
 
-.my-account {
-    color: #8B5A2B;
-  }
+
+.nav-icons {
+    color: #8B5A2B !important;
+
+}
   
-  .shopping-bag {
-    color: #8B5A2B;
-  }
-  
-  .my-account-text,
-  .shopping-bag-text {
+.nav-text {
     color: #8B5A2B !important;
     font-family: 'Playfair Display', serif;
+    transition: color 0.3s;
   }
 
+  .navbar-light .navbar-nav .nav-link {
+    color: #8B5A2B !important;
+    font-family: 'Playfair Display', serif;
+    transition: color 0.3s;
+}
+
+.nav-text.nav-link:hover {
+    color:#699C6B !important; /* Hover color */
+  }
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
