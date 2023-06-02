@@ -7,6 +7,10 @@ body {
     color: black;
 }
 
+header {
+    background-color: #FFFFF0;
+}
+
 .logo-font {
     color: #8B5A2B !important;
     font-family: 'Playfair', serif;
@@ -19,10 +23,10 @@ body {
     background-color: #CDA3A3;
     color: #FFFFF0;
 }
+
 .searchbar {
     font-family: 'Playfair', serif;
 }
-
 
 .nav-icons {
     color: #8B5A2B !important;
@@ -35,15 +39,77 @@ body {
     transition: color 0.3s;
   }
 
-  .navbar-light .navbar-nav .nav-link {
+.navbar-light .navbar-nav .nav-link {
     color: #8B5A2B !important;
     font-family: 'Playfair Display', serif;
     transition: color 0.3s;
 }
 
+.company-section {
+    display: flex;
+    align-items: center;
+    margin: 150px 20px 80px;
+}
+  
+.company-info {
+    flex-basis: 60%;
+    padding-right: 30px;
+}
+  
+.home-title {
+    font-size: 24px;
+    color: #D4AF37;
+    font-family: 'Cormorant Garamond', serif;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+  
+.home-description {
+    font-size: 16px;
+    color: #8B5A2B;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+.company-image {
+    flex-basis: 30%;
+}
+  
+.company-image img {
+    width: 120%;
+  }
+
+.company-image img:hover {
+    opacity: 0.9;
+}
+
 .nav-text.nav-link:hover {
     color:#699C6B !important; /* Hover color */
   }
+
+.collection-image {
+    max-width: 70%;
+}
+
+.collection-image:hover {
+    opacity: 0.9;
+}
+
+.discover-button {
+    display: inline-block;
+    background-color: #8B5A2B;
+    color: #FFFFF0;
+    font-size: 16px;
+    font-family:'Josefin Sans', sans-serif;
+    padding: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+  
+.discover-button:hover {
+    background-color: #699C6B;
+    color: #FFFFF0;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -51,6 +117,7 @@ body {
     .container {
       max-width: 80%;
     }
+
   }
   
   /* fixed top navbar only on medium and up */
@@ -66,4 +133,4 @@ body {
       .header-container {
           padding-top: 164px;
       }
-  }
+}
