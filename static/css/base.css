@@ -110,6 +110,25 @@ header {
     background-color: #699C6B;
     color: #FFFFF0;
 }
+
+.creator-link {
+    display: block;
+    color: #8B5A2B;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: color 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.creator-link:hover {
+    color: #699C6B;
+}
+
+.testimonials-image {
+    height: 150px;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
