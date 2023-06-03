@@ -126,10 +126,41 @@ header {
     color: #699C6B;
 }
 
-.testimonials-image {
-    height: 150px;
+.newsletter-section {
+    text-align: center;
 }
-/* -------------------------------- Media Queries */
+
+.custom-submit-button {
+    display: inline-block;
+    background-color: #8B5A2B;
+    color: #FFFFF0;
+    font-size: 16px;
+    font-family:'Josefin Sans', sans-serif;
+    padding: 5px;
+    text-decoration: none;
+    transition: background-color, border 0.3s;
+    margin: 5px;
+    border-color: #8B5A2B;
+}
+
+.custom-submit-button:hover {
+    background-color: #699C6B;
+    border-color:#699C6B;
+    color:#FFFFF0;
+    text-underline-position: under;
+}
+
+.subscription-input {
+    text-align: center;
+    font-family:'Josefin Sans', sans-serif;
+}
+
+.newsletter-image {
+    width: 70%;
+    margin: 10px;
+}
+
+    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
