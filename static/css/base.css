@@ -90,7 +90,7 @@ header {
     max-width: 70%;
 }
 
-.collection-image:hover {
+.hover-image:hover {
     opacity: 0.9;
 }
 
@@ -114,7 +114,7 @@ header {
 .creator-link {
     display: block;
     color: #8B5A2B;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair', serif;
     font-size: 18px;
     margin-top: 10px;
     transition: color 0.3s;
@@ -152,7 +152,7 @@ header {
 
 .subscription-input {
     text-align: center;
-    font-family:'Josefin Sans', sans-serif;
+    font-family: 'Playfair', serif;
 }
 
 .newsletter-image {
@@ -160,7 +160,76 @@ header {
     margin: 10px;
 }
 
-    -------------------------------- Media Queries */
+.footer {
+    background-color: #FFFFF0;
+    padding: 30px 0;
+    margin: 40px;
+    border-top: 0.5px solid #8B5A2B;
+    text-align: center;
+  }
+
+.footer-title {
+    font-family: 'Playfair', serif;
+    color:#8B5A2B;
+    font-weight: bolder;
+}
+  
+  .social-icons {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+  
+  .social-icons li {
+    margin-right: 10px;
+  }
+  
+  .social-icons a {
+    color: #8B5A2B;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #CDA3A3;
+  }
+  
+  .footer-links {
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links a {
+    display: block;
+    margin-bottom: 5px;
+    color:#8B5A2B;
+  }
+  
+  .footer-links a:hover{
+    color:#CDA3A3
+  }
+
+  .footer-logo {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+  }
+  
+  .copyright-text {
+    font-size: 14px;
+    text-align: center;
+    color:#D4AF37
+  }
+  
+  
+/*    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {

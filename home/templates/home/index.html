@@ -17,7 +17,7 @@
       <p class="home-description">At Aurum Reborn, we are passionate about creating handcrafted gold jewellery that reflects your unique style. Our pieces are meticulously crafted with ethically sourced and recycled gold, ensuring sustainability and a commitment to the environment. Each piece tells a story, combining exquisite craftsmanship and a touch of luxury. Discover our collection and adorn yourself with timeless beauty.</p>
     </div>
     <div class="company-image">
-      <img src="media/homepage-image.jpg" alt="Company Image">
+      <img src="media/homepage-image.jpg" alt="Company Image" class="hover-image">
     </div>
   </section>
 </div>
@@ -28,7 +28,7 @@
         <div class="section">
             <h2 class="home-title">Discover Our Collections</h2>
             <p class="home-description">Browse through our exquisite selection of handmade gold jewellery.</p>
-          <img src="media/our-collection.jpg" class="img-fluid collection-image" alt="collection Image"><br>
+          <img src="media/our-collection.jpg" class="img-fluid collection-image hover-image" alt="collection Image"><br>
           <a href="#" class="discover-button">Discover Our Collections</a>
         </div>
       </div>
@@ -42,7 +42,7 @@
       <p class="home-description">We believe that the jewelry you wear should not only be stunning but also align with your values. That's why we have curated a collection of exquisite pieces made from ethical gold, ensuring that every creation carries a story of sustainability and responsibility. Our commitment to ethical sourcing means that you can adorn yourself with elegance, knowing that your jewelry has been crafted with integrity and care. Experience the joy of wearing jewelry that not only complements your style but also reflects your commitment to a better world. Discover the timeless beauty of ethical gold and embrace a new standard of conscious luxury.</p>
     </div>
     <div class="company-image">
-      <img src="media/homepage-image2.jpg" alt="Company Image">
+      <img src="media/homepage-image2.jpg" alt="Company Image" class="hover-image">
     </div>
   </section>
 </div>
@@ -50,15 +50,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4">
-      <img src="media/elena-patel.jpg" alt="Elena Patel" class="img-fluid">
+      <img src="media/elena-patel.jpg" alt="Elena Patel" class="img-fluid hover-image">
       <a href="#" class="creator-link">Elena Patel</a>
     </div>
     <div class="col-md-4">
-      <img src="media/siobhan-murphy.jpg" alt="Siobhan Murphy" class="img-fluid">
+      <img src="media/siobhan-murphy.jpg" alt="Siobhan Murphy" class="img-fluid hover-image">
       <a href="#" class="creator-link">Siobhan Murphy</a>
     </div>
     <div class="col-md-4">
-      <img src="media/amara-thompson.jpg" alt="Amara Thompson" class="img-fluid">
+      <img src="media/amara-thompson.jpg" alt="Amara Thompson" class="img-fluid hover-image">
       <a href="#" class="creator-link">Amara Thompson</a>
     </div>
   </div>
@@ -81,7 +81,7 @@
           <a href="" class="discover-button">See Our Testimonials</a>
         </div>
       </div>
-      <div class="company-image">
+      <div class="company-image hover-image">
         <img src="media/testimonials-home.jpg" alt="Testimonials Image">
       </div>
     </div>
@@ -94,7 +94,7 @@
           <h2 class="home-title">Subscribe to Our Newsletter</h2>
           <p class="home-description">Stay up to date with our latest collections, promotions, and news by subscribing to our newsletter.</p>
       </div>
-      <img src="media/newsletter-image.jpg" alt="Newsletter Image" class="newsletter-image">
+      <img src="media/newsletter-image.jpg" alt="Newsletter Image" class="newsletter-image hover-image">
         <form class="newsletter-form">
           <div class="form-group">
             <input type="email" class="form-control subscription-input" placeholder="Enter your email address">
@@ -104,4 +104,39 @@
   </div>
 </section>
 
-{% endblock%}
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h5 class="footer-title">Follow Us</h5>
+        <ul class="social-icons">
+          <li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
+          <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="footer-links">
+          <a href="#">Careers</a>
+          <a href="#">Return Policy</a>
+          <a href="#">Terms and Conditions</a>
+        </div>
+      </div>
+      <div class="col">
+        <div class="footer-logo">
+          <img src="media/footer-logo.jpg" alt="Footer Logo" class="hover-image">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="copyright-text">
+          &copy; 2023 Aurum Reborn. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+{% endblock %}
