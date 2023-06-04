@@ -23,7 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
-    path('creators/', CreatorsPageView.as_view(), name='creators-page'),
+    path('creators/', CreatorsPageView.as_view(), name='creators'),
     path('creators/form/', CreatorsFormView.as_view(), name='creators-form'),
 
 

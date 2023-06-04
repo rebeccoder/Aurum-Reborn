@@ -243,7 +243,9 @@ header {
     color:#D4AF37
   }
   
-  
+  .creator-form-header {
+    margin-top: 200px;
+  }
 /*    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -56,6 +56,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'aurum_reborn.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
