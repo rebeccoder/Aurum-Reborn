@@ -22,6 +22,21 @@ header {
     font-family: 'Playfair', serif;
     background-color: #CDA3A3;
     color: #FFFFF0;
+    padding-bottom: 2px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 10px;
+    background-color: #CDA3A3;
+    color:#FFFFF0;
+    font-family: 'Playfair Display', serif;
+    border: none;
+    cursor: pointer;
+  }
+  
+.hidden {
+    display: none;
 }
 
 .searchbar {
