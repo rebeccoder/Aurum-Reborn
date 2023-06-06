@@ -17,14 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from creators.views import CreatorsPageView, CreatorsFormView
+from creators.views import Creators, CreateCreator, UpdateCreator
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
     path('', include('home.urls')),
-    path('creators/', CreatorsPageView.as_view(), name='creators'),
-    path('creators/form/', CreatorsFormView.as_view(), name='creators-form'),
-
-
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('creators/', Creators.as_view(), name='creators'),
+    path('creators/create/', CreateCreator.as_view(), name='creator_create'),
+    path('creators/update/<int:pk>/', UpdateCreator.as_view(), name='creator_update'),
+    # ... other URLs for creators app
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

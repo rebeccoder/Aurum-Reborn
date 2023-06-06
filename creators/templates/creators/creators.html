@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %} - Creators{% endblock %}
+
+{% block page_header %}
+    <div class="container pt-5 creator-header">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-5 fw-bold pb-3">
+                    Our Talented Creators
+                </h1>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container pt-4">
+        <!-- If user is a superuser, show button to add a new creator -->
+        <div class="row">
+            <div class="col-12 py-4">
+                {% if request.user.is_superuser %}
+                    <p>Add a new creator:<br>
+                        <a href="{% url 'creator_create' %}" class="btn btn-sm btn-info rounded-0 theme-btn-sm me-2">Add Creator</a>
+                {% endif %}
+            </div>
+        </div>
+{% endblock %}
+
+

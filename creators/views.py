@@ -1,5 +1,4 @@
 from django.shortcuts import render
-
 from django.contrib import messages
 from django.contrib.auth.mixins import UserPassesTestMixin
 from django.contrib.messages.views import SuccessMessageMixin
@@ -10,7 +9,6 @@ from django.views.generic import TemplateView
 from django.views.generic import CreateView
 from .forms import CreatorsForm
 from .models import Creator
-
 
 
 class Creators(generic.ListView):
@@ -78,14 +76,11 @@ class UpdateCreator(UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView
         """
         If the user is not a superuser, display a toast message.
         """
-
-class CreatorsPageView(TemplateView):
-    template_name = 'creators/creators.html'
-    
-    
+        messages.error(self.request, "You need proper authorization to do that.")
+        return redirect("home")
 
 class CreatorsFormView(CreateView):
     model = Creator
     form_class = CreatorsForm
-    template_name = 'creators/creators_form.html'
+    template_name = 'creators/creator_form.html'
     success_url = '/creators/'
