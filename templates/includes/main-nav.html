@@ -1,6 +1,11 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
+            <a class="font-weight-bold nav-link nav-text mr-5" href="{% url 'home' %}" id="home-link" aria-haspopup="true" aria-expanded="false">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
             <a class=" font-weight-bold nav-link nav-text mr-5" href="#" id="collections-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Our Collections
             </a>
@@ -18,7 +23,7 @@
                 Creators
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="creators-link">
-                <a href="" class="dropdown-item nav-text">All Creators</a>
+                <a href="{% url 'creators' %}" class="dropdown-item nav-text">All Creators</a>
                 <a href="" class="dropdown-item nav-text">Creator 1</a>
                 <a href="" class="dropdown-item nav-text">Creator 2</a>
                 <a href="" class="dropdown-item nav-text">Creator 3</a>

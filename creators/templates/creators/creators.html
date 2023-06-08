@@ -23,9 +23,35 @@
                 {% if request.user.is_superuser %}
                     <p>Add a new creator:<br>
                         <a href="{% url 'creator_create' %}" class="btn btn-sm btn-info rounded-0 theme-btn-sm me-2">Add Creator</a>
+                    </p>
                 {% endif %}
             </div>
         </div>
+        <!-- For each creator in the database -->
+        {% for creator in creators %}
+            <div class="row py-5">
+                <!-- Check if loop counter is divisible by 2, to alternate layout -->
+                <div class="col-12 col-md-6 {% if forloop.counter|divisibleby:2 %}order-lg-first{% else %}order-lg-second{% endif %} d-flex justify-content-center">
+                    <!-- Display an image if they have one... -->
+                    {% if creator.image %}
+                        <img class="img-fluid" src="{{ creator.image.url }}" alt="{{ creator.name }}" width="700" height="450">
+                    <!-- Else show the fallback image -->
+                    {% else %}
+                        <img class="img-fluid" src="{{ MEDIA_URL }}default.jpg" alt="{{ creator.name }}" width="700" height="450">
+                    {% endif %}
+                </div>
+                <!-- Check if loop counter is divisible by 2, to alternate layout -->
+                <div class="col-12 col-md-6 p-5 {% if forloop.counter|divisibleby:2 %}order-lg-second{% else %}order-lg-first{% endif %}">
+                    <!-- Creator name + location -->
+                    <h2>{{ creator.name }}, <span class="text-secondary">{{ creator.location }}</span></h2>
+                    <!-- Creator bio -->
+                    <p>{{ creator.bio }}</p>
+                    <!-- Creator website -->
+                    {% if creator.website %}
+                    <p><strong>Website:</strong> <a href="{{ creator.website }}" target="_blank">{{ creator.website }}</a></p>
+            {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
-
-
