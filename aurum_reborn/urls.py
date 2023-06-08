@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from creators.views import Creators, CreateCreator, UpdateCreator
+from creators.views import Creators, CreateCreator, UpdateCreator, CreatorDeleteView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +26,6 @@ urlpatterns = [
     path('creators/', Creators.as_view(), name='creators'),
     path('creators/create/', CreateCreator.as_view(), name='creator_create'),
     path('creators/update/<int:pk>/', UpdateCreator.as_view(), name='creator_update'),
+    path('creators/delete/<int:pk>/', CreatorDeleteView.as_view(), name='creator_delete'),
     # ... other URLs for creators app
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

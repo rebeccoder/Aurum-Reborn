@@ -51,6 +51,19 @@
                     <p><strong>Website:</strong> <a href="{{ creator.website }}" target="_blank">{{ creator.website }}</a></p>
             {% endif %}
                 </div>
+                    <!-- If user is a superuser, show buttons to update/delete this creator -->
+                    {% if request.user.is_superuser %}
+                        <div>
+                            <a href={% url 'creator_update' creator.pk %}  class="btn btn-sm btn-ifo rounded-0 theme-btn-sm me-2">Update creator</a>
+                            <button type="button" class="btn btn-sm btn-danger rounded-0 theme-btn-sm" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#deleteModal" 
+                                data-bs-object="{{ creator }}" 
+                                data-bs-url="{% url 'creator_delete' creator.pk %}">
+                                Delete creator
+                            </button>
+                        </div>
+                    {% endif %}
             </div>
         {% endfor %}
     </div>

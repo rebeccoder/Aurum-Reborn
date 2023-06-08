@@ -79,6 +79,28 @@ class UpdateCreator(UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView
         messages.error(self.request, "You need proper authorization to do that.")
         return redirect("home")
 
+class CreatorDeleteView(UserPassesTestMixin, SuccessMessageMixin, generic.DeleteView):
+    """
+    A view to delete a creator. Restricted to superusers only.
+    """
+
+    model = Creator
+    success_url = reverse_lazy('creators')
+    success_message = "Creator successfully deleted."
+
+    def test_func(self):
+        """
+        Check if the user is a superuser.
+        """
+        return self.request.user.is_superuser
+
+    def handle_no_permission(self):
+        """
+        If the user is not a superuser, display a toast message.
+        """
+        messages.error(self.request, "You need proper authorization to do that.")
+        return redirect("home")
+        
 class CreatorsFormView(CreateView):
     model = Creator
     form_class = CreatorsForm
