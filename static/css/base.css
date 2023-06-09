@@ -109,7 +109,7 @@ header {
     opacity: 0.9;
 }
 
-.discover-button {
+.main-button {
     display: inline-block;
     background-color: #8B5A2B;
     color: #FFFFF0;
@@ -121,7 +121,7 @@ header {
     margin: 5px;
 }
   
-.discover-button:hover {
+.main-button:hover {
     background-color: #699C6B;
     color: #FFFFF0;
 }
@@ -246,6 +246,12 @@ header {
   .creator-header {
     margin-top: 200px;
   }
+
+.creators-title {
+
+}
+
+.creator-
 /*    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -269,4 +275,10 @@ header {
       .header-container {
           padding-top: 164px;
       }
+}
+
+.form-label {
+  font-family: 'Playfair Display', serif;
+  font-size: large;
+  color: #8B5A2B
 }

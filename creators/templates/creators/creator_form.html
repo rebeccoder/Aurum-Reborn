@@ -44,8 +44,8 @@
                     </div>
                     <!-- Add other fields as needed -->
                     <div class="d-flex align-items-start justify-content-between">
-                        <a href="{% url 'creators' %}" class="btn rounded-0 py-2 theme-btn"><i class="icon fa-solid fa-xmark px-1" aria-hidden="true"></i> Cancel</a>
-                        <button id="submit-button" class="btn btn-primary rounded-0 py-2 theme-btn">{% if object %}Update{% else %}Create{% endif %} Creator <i class="icon fa-solid fa-check px-1" aria-hidden="true"></i></button>    
+                        <a href="{% url 'creators' %}" class="custom-submit-button"><i class="icon fa-solid fa-xmark px-1" aria-hidden="true"></i> Cancel</a>
+                        <button type="submit" class="custom-submit-button">{% if object %}Update{% else %}Create{% endif %} Creator <i class="icon fa-solid fa-check px-1" aria-hidden="true"></i></button>    
                     </div>
                 </form>
             </div>
