@@ -11,6 +11,7 @@ from .forms import CreatorsForm
 from .models import Creator
 
 
+
 class Creators(generic.ListView):
     """
     A view to return the list of creators.
@@ -100,6 +101,17 @@ class CreatorDeleteView(UserPassesTestMixin, SuccessMessageMixin, generic.Delete
         """
         messages.error(self.request, "You need proper authorization to do that.")
         return redirect("home")
+
+    def delete(self, request, *args, **kwargs):
+        """
+        Handle the delete operation.
+        """
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        messages.success(self.request, self.success_message)
+        self.object.delete()
+        return redirect("creators")
+
         
 class CreatorsFormView(CreateView):
     model = Creator

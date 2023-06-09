@@ -7,5 +7,5 @@ urlpatterns = [
     path('', CreatorListView.as_view(), name='creators'),
     path('create/', CreatorCreateView.as_view(), name='creator_create'),
     path('update/<int:pk>/', CreatorUpdateView.as_view(), name='creator_update'),
-    path('delete/<int:pk>/', CreatorDeleteView.as_view(), name='creator_delete'),
+    path('delete/<int:pk>/', views.CreatorDeleteView.as_view(), name='creator_delete'),
 ]

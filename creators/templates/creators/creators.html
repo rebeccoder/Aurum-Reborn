@@ -55,14 +55,12 @@
                     {% if request.user.is_superuser %}
                         <div>
                             <a href={% url 'creator_update' creator.pk %}  class="btn btn-sm btn-ifo rounded-0 theme-btn-sm me-2">Update creator</a>
-                            <button type="button" class="btn btn-sm btn-danger rounded-0 theme-btn-sm" 
-                                data-bs-toggle="modal" 
-                                data-bs-target="#deleteModal" 
-                                data-bs-object="{{ creator }}" 
-                                data-bs-url="{% url 'creator_delete' creator.pk %}">
-                                Delete creator
-                            </button>
-                        </div>
+                            <form action="{% url 'creator_delete' creator.pk %}" method="POST">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-sm btn-danger rounded-0 theme-btn-sm">
+                                    Delete creator
+                                </button>
+                            </form>
                     {% endif %}
             </div>
         {% endfor %}
