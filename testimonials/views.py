@@ -47,6 +47,7 @@ def testimonial_delete(request, testimonial_id):
         if request.user == testimonial.user:
             testimonial.delete()
             messages.success(request, 'Testimonial deleted successfully.')
+            return redirect('/testimonials')
         else:
             messages.error(request, 'You are not authorized to delete this testimonial.')
     except ObjectDoesNotExist:

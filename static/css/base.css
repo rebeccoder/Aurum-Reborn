@@ -5,6 +5,8 @@ body {
     background-color: #FFFFF0;
     height: calc(100vh - 164px);
     color: black;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -181,6 +183,7 @@ header {
     margin: 40px;
     border-top: 0.5px solid #8B5A2B;
     text-align: center;
+    margin-top: auto; 
   }
 
 .footer-title {
@@ -257,6 +260,65 @@ header {
     max-height: 60%;
     margin: 5em;
 }
+
+.testimonials-head {
+  margin-top: 12em;
+  margin-left: 2em;
+  text-align: center;
+}
+
+.testimonials-title {
+  color:#8B5A2B;
+  font-family: 'Playfair', serif;
+  
+}
+
+.testimonials-image {
+  height: 400px;
+}
+
+.testimonials-image:hover {
+  opacity: 0.9;
+}
+
+/* styles.css */
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.testimonial-card {
+  margin: 2em;
+  margin-top: 3em;
+  background-color: #FFFFF0;
+  padding: 20px;
+  border: 1px solid #8B5A2B;
+}
+
+.testimonial-content {
+  text-align: center;
+  color:#8B5A2B;
+  font-family:'Josefin Sans', sans-serif;
+}
+
+.testimonial-card-title {
+  text-align: center;
+  color:#D4AF37;
+  font-family: 'Playfair', serif;
+}
+
+.testimonials-links {
+  font-family: 'Playfair', serif;
+  color:#699C6B;
+}
+
+.testimonials-links:hover {
+  color:#CDA3A3
+}
+
+
 /*    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

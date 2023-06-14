@@ -1,30 +1,37 @@
-
+{% extends "base.html" %}
 
 {% block content %}
 
-{% if messages %}
+<div class="testimonials-head">
+  {% if messages %}
   <ul class="messages">
     {% for message in messages %}
-      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
     {% endfor %}
   </ul>
+  {% endif %}
+  <img src="../media/testimonials-image.jpg" class="testimonials-image">
+  <h1 class="testimonials-title">Testimonials</h2>
+{% if user.is_authenticated %}
+<a href="{% url 'testimonials:testimonial_create' %}" class="main-button">Add Testimonial</a>
 {% endif %}
 
-  <h2>Testimonials</h2>
-  
-{% if user.is_authenticated %}
-  <a href="{% url 'testimonials:testimonial_create' %}" class="btn btn-primary">Add Testimonial</a>
-{% endif %}
-  <ul>
-    {% for testimonial in testimonials %}
-      <li>{{ testimonial.name }} - {{ testimonial.rating }}/5</li>
+</div>
+<div class="testimonial-container">
+  {% for testimonial in testimonials %}
+  <div class="testimonial-card">
+    <div class="testimonial-content">
+      <h3 class="testimonial-card-title">{{ testimonial.name }}</h3>
       <p>{{ testimonial.testimonial }}</p>
+      <p>Rating: {{ testimonial.rating }}</p>
       {% if request.user == testimonial.user %}
-        <a href="{% url 'testimonials:testimonial_edit' testimonial.id %}">Edit</a>
-        <a href="{% url 'testimonials:testimonial_delete' testimonial.id %}">Delete</a>
+      <a class="testimonials-links" href="{% url 'testimonials:testimonial_edit' testimonial.id %}">Edit</a>
+      <a class="testimonials-links" href="{% url 'testimonials:testimonial_delete' testimonial.id %}">Delete</a>
       {% endif %}
-    {% empty %}
-      <li>No testimonials yet.</li>
-    {% endfor %}
-  </ul>
+    </div>
+  </div>
+  {% empty %}
+  <p>No testimonials yet.</p>
+  {% endfor %}
+</div>
 {% endblock %}
