@@ -3,13 +3,13 @@
 {% block content %}
 
 <div class="testimonials-head">
-  {% if messages %}
-  <ul class="messages">
-    {% for message in messages %}
-    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
+  <div class="flash-message">
+    {% if messages %}
+      {% for message in messages %}
+        <div class="messages {% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+  </div>
   <img src="../media/testimonials-image.jpg" class="testimonials-image">
   <h1 class="testimonials-title">Testimonials</h2>
 {% if user.is_authenticated %}
@@ -21,7 +21,7 @@
   {% for testimonial in testimonials %}
   <div class="testimonial-card">
     <div class="testimonial-content">
-      <h3 class="testimonial-card-title">{{ testimonial.name }}</h3>
+      <h3 class="testimonial-card-title">{{ testimonial.title }}</h3>
       <p>{{ testimonial.testimonial }}</p>
       <p>Rating: {{ testimonial.rating }}</p>
       {% if request.user == testimonial.user %}
