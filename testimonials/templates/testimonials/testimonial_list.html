@@ -1,0 +1,27 @@
+
+
+{% block content %}
+
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+  <h2>Testimonials</h2>
+  <a href="{% url 'testimonials:testimonial_create' %}" class="btn btn-primary">Add Testimonial</a>
+  <ul>
+    {% for testimonial in testimonials %}
+      <li>{{ testimonial.name }} - {{ testimonial.rating }}/5</li>
+      <p>{{ testimonial.testimonial }}</p>
+      {% if request.user == testimonial.user %}
+        <a href="{% url 'testimonials:testimonial_edit' testimonial.id %}">Edit</a>
+        <a href="{% url 'testimonials:testimonial_delete' testimonial.id %}">Delete</a>
+      {% endif %}
+    {% empty %}
+      <li>No testimonials yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

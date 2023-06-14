@@ -27,5 +27,8 @@ urlpatterns = [
     path('creators/create/', CreateCreator.as_view(), name='creator_create'),
     path('creators/update/<int:pk>/', UpdateCreator.as_view(), name='creator_update'),
     path('creators/delete/<int:pk>/', CreatorDeleteView.as_view(), name='creator_delete'),
+    path('testimonials/', include('testimonials.urls', namespace='testimonials')),
     # ... other URLs for creators app
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

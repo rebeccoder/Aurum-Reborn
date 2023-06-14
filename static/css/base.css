@@ -251,7 +251,12 @@ header {
 
 }
 
-.creator-
+.creator-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 60%;
+    margin: 5em;
+}
 /*    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
