@@ -11,7 +11,10 @@
 {% endif %}
 
   <h2>Testimonials</h2>
+  
+{% if user.is_authenticated %}
   <a href="{% url 'testimonials:testimonial_create' %}" class="btn btn-primary">Add Testimonial</a>
+{% endif %}
   <ul>
     {% for testimonial in testimonials %}
       <li>{{ testimonial.name }} - {{ testimonial.rating }}/5</li>
