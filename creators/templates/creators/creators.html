@@ -4,64 +4,47 @@
 {% block extra_title %} - Creators{% endblock %}
 
 {% block page_header %}
-    <div class="container pt-5 creator-header">
-        <div class="row">
-            <div class="col">
-                <h1 class="creators-title">
-                    Our Talented Creators
-                </h1>
-            </div>
-        </div>
-    </div>
+<div class="creator-header">
+    <h1 class="creators-title">Our Talented Creators </h1>
+    {% if request.user.is_superuser %}
+    <a href="{% url 'creator_create' %}" class="main-button">Add a New Creator</a>
+    {% endif %}
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container pt-4">
-        <!-- If user is a superuser, show button to add a new creator -->
-        <div class="row">
-            <div class="col-12 py-4">
-                {% if request.user.is_superuser %}
-                    <h2 class="home-title">Add a new creator:</h2>
-                    <a href="{% url 'creator_create' %}" class="main-button">Add Creator</a>
-                {% endif %}
-            </div>
-        </div>
-        <!-- For each creator in the database -->
-        {% for creator in creators %}
-            <div class="row py-5">
-                <!-- Check if loop counter is divisible by 2, to alternate layout -->
-                <div class="col-12 col-md-6 {% if forloop.counter|divisibleby:2 %}order-lg-first{% else %}order-lg-second{% endif %} d-flex justify-content-center">
-                    <!-- Display an image if they have one... -->
-                    {% if creator.image %}
-                        <img class="creator-image" src="{{ creator.image.url }}" alt="{{ creator.name }}" width="700" height="450">
-                    <!-- Else show the fallback image -->
-                    {% else %}
-                        <img class="creator-image" src="{{ MEDIA_URL }}default.jpg" alt="{{ creator.name }}" width="700" height="450">
-                    {% endif %}
-                </div>
-                <!-- Check if loop counter is divisible by 2, to alternate layout -->
-                <div class="col-12 col-md-6 p-5 {% if forloop.counter|divisibleby:2 %}order-lg-second{% else %}order-lg-first{% endif %}">
-                    <!-- Creator name + location -->
-                    <h2 class="creators-name">{{ creator.name }}, <span class="text-secondary">{{ creator.location }}</span></h2>
-                    <!-- Creator bio -->
-                    <p class= "creators-bio">{{ creator.bio }}</p>
-                    <!-- Creator website -->
-                    {% if creator.website %}
-                    <p class = "creators-wesbite"><strong>Website:</strong> <a href="{{ creator.website }}" target="_blank">{{ creator.website }}</a></p>
+<div class="container pt-4">
+    {% for creator in creators %}
+    <div class="row py-5">
+
+        <div class="col-12 col-md-6 {% if forloop.counter|divisibleby:2 %}order-lg-first{% else %}order-lg-second{% endif %} d-flex justify-content-center">
+
+            {% if creator.image %}
+            <img class="creator-image" src="{{ creator.image.url }}" alt="{{ creator.name }}" width="700" height="450">
+
+            {% else %}
+            <img class="creator-image" src="{{ MEDIA_URL }}default.jpg" alt="{{ creator.name }}" width="700" height="450">
             {% endif %}
-                </div>
-                    <!-- If user is a superuser, show buttons to update/delete this creator -->
-                    {% if request.user.is_superuser %}
-                        <div>
-                            <a href={% url 'creator_update' creator.pk %}  class="btn btn-sm btn-ifo rounded-0 theme-btn-sm me-2">Update creator</a>
-                            <form action="{% url 'creator_delete' creator.pk %}" method="POST">
-                                {% csrf_token %}
-                                <button type="submit" class="btn btn-sm btn-danger rounded-0 theme-btn-sm">
-                                    Delete creator
-                                </button>
-                            </form>
-                    {% endif %}
-            </div>
-        {% endfor %}
+        </div>
+
+        <div class="col-12 col-md-6 p-5 {% if forloop.counter|divisibleby:2 %}order-lg-second{% else %}order-lg-first{% endif %}">
+            <h2 class="creators-name">{{ creator.name }}, <span class="text-secondary">{{ creator.location }}</span></h2>
+            <p class="creators-bio">{{ creator.bio }}</p>
+            {% if creator.website %}
+            <p class="creators-website"><strong>Website:</strong> <a href="{{ creator.website }}" target="_blank">{{ creator.website }}</a></p>
+            {% endif %}
+        </div>
+
+    {% if request.user.is_superuser %}
+    <div class="col-12 col-md-6 creators-buttons">
+        <a href="{% url 'creator_update' creator.pk %}" class="creators-edit-button">Update creator</a>
+        <a href="#" class="creators-delete-button" onclick="event.preventDefault(); if(confirm('Are you sure you want to delete this creator?')) { document.getElementById('delete-form-{{ creator.pk }}').submit(); }">Delete creator</a>
+        <form id="delete-form-{{ creator.pk }}" action="{% url 'creator_delete' creator.pk %}" method="POST" style="display: none;">
+            {% csrf_token %}
+        </form>
     </div>
+    {% endif %} 
+    </div>
+    {% endfor %}
+</div>
 {% endblock %}

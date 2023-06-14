@@ -247,18 +247,74 @@ header {
   }
   
   .creator-header {
-    margin-top: 200px;
+    margin-top: 15em;
+    margin-left: 2em;
+    text-align: center;
   }
 
 .creators-title {
-
+  color:#8B5A2B;
+  font-family: 'Playfair', serif;
 }
 
 .creator-image {
     max-width: 100%;
     height: auto;
-    max-height: 60%;
+    max-height: 55%;
     margin: 5em;
+    margin-top: 7em;
+}
+
+.creators-name {
+  color:#8B5A2B;
+  font-family: 'Playfair', serif;
+}
+
+.text-secondary {
+  color: #D4AF37 !important;
+}
+
+.creators-bio {
+  font-family: 'Raleway', sans-serif;
+  color:#8B5A2B;
+}
+
+.creators-website {
+  color: #8B5A2B;
+  font-family: 'Playfair', serif;
+}
+
+.creators-website a {
+  color:#699C6B;
+}
+
+.creators-website a:hover {
+  color:#CDA3A3;
+}
+
+.creators-buttons {
+  margin-left: 2rem;
+}
+
+.creators-edit-button {
+  font-family: 'Playfair', serif;
+  color:#CDA3A3;
+  margin: 3px;
+
+}
+
+.creators-edit-button:hover {
+  color:#699C6B;
+}
+
+.creators-delete-button {
+  font-family: 'Playfair', serif;
+  color:#699C6B;
+  margin: 3px;
+}
+
+.creators-delete-button:hover {
+  color:#CDA3A3;
 }
 
 .testimonials-head {
