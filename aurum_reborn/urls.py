@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from creators.views import Creators, CreateCreator, UpdateCreator, CreatorDeleteView
+from testimonials.views import testimonial_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,8 +28,8 @@ urlpatterns = [
     path('creators/create/', CreateCreator.as_view(), name='creator_create'),
     path('creators/update/<int:pk>/', UpdateCreator.as_view(), name='creator_update'),
     path('creators/delete/<int:pk>/', CreatorDeleteView.as_view(), name='creator_delete'),
-    path('testimonials/', include('testimonials.urls', namespace='testimonials')),
-    # ... other URLs for creators app
+    path('testimonials/', testimonial_list, name='testimonial_list'),
+    path('testimonials/', include('testimonials.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 

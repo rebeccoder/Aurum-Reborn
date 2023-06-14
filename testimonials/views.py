@@ -3,7 +3,7 @@ from .models import Testimonial
 from django.contrib import messages
 from django.core.exceptions import ObjectDoesNotExist
 from .forms import TestimonialForm
-
+from django.contrib.auth.decorators import login_required
 
 
 def testimonial_create(request):
@@ -19,15 +19,24 @@ def testimonial_create(request):
         form = TestimonialForm()
     return render(request, 'testimonials/testimonial_create.html', {'form': form})
 
+@login_required
 def testimonial_edit(request, testimonial_id):
     testimonial = get_object_or_404(Testimonial, pk=testimonial_id)
+    
+    # Check if the current user is the owner of the testimonial
+    if testimonial.user != request.user:
+        messages.error(request, "You are not authorized to edit this testimonial.")
+        return redirect('/testimonials')
+    
     if request.method == 'POST':
         form = TestimonialForm(request.POST, instance=testimonial)
         if form.is_valid():
             form.save()
-            return redirect('testimonial_list')
+            messages.success(request, "Testimonial updated successfully!")
+            return redirect('/testimonials')
     else:
         form = TestimonialForm(instance=testimonial)
+    
     return render(request, 'testimonials/testimonial_edit.html', {'form': form, 'testimonial': testimonial})
 
 def testimonial_delete(request, testimonial_id):
