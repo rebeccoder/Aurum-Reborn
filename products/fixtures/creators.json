@@ -1,0 +1,35 @@
+[
+{
+  "model": "creators.creator",
+  "pk": 1,
+  "fields": {
+    "name": "Amara Thompson",
+    "bio": "Amara Thompson is a remarkable creator at Aurum Reborn, specializing in the art of handcrafting jewellery from recycled gold. With a deep commitment to sustainability and environmental consciousness, Amara transforms discarded gold into exquisite pieces of wearable art. Their passion for ethical jewelry-making shines through in every meticulously crafted design. With a keen eye for detail and a mastery of traditional goldsmithing techniques, Amara creates stunning pieces that blend elegance and eco-consciousness seamlessly. From delicate necklaces to intricate bracelets, each piece tells a unique story and reflects Amara's dedication to creating sustainable beauty. By incorporating recycled materials into their work, Amara not only promotes a greener future but also celebrates the inherent beauty and history of each recycled gold piece. Through their craftsmanship and artistic vision, Amara Thompson continues to redefine sustainable luxury in the world of jewellery-making.",
+    "location": "Cornwall",
+    "website": "www.amarathompson.com",
+    "image": "media/amara-thompson_u5hWjNp.jpg"
+  }
+},
+{
+  "model": "creators.creator",
+  "pk": 2,
+  "fields": {
+    "name": "Elena Patel",
+    "bio": "Introducing Elena Patel, a talented creator at Aurum Reborn specializing in handmade recycled gold jewelry. With a passion for sustainability and a keen eye for design, Elena crafts exquisite pieces that harmonize elegance and environmental consciousness. Her meticulous attention to detail and ability to infuse creativity into each stroke result in jewelry that radiates grace, sophistication, and ethereal charm. By repurposing discarded gold, Elena contributes to reducing environmental harm caused by traditional mining practices. Her creations inspire a shift towards responsible consumption and appreciation for the inherent beauty of recycled materials.",
+    "location": "Bristol",
+    "website": "www.elenapatel.com",
+    "image": "media/elena-patel.jpg"
+  }
+},
+{
+  "model": "creators.creator",
+  "pk": 3,
+  "fields": {
+    "name": "Siobhan Murphy",
+    "bio": "Meet Siobhn Murphy, a remarkable creator at Aurum Reborn, specializing in handcrafted recycled gold jewelry. With a deep commitment to sustainability and a flair for innovation, Siobhn skillfully transforms reclaimed gold into stunning pieces of wearable art. Her designs embody a perfect balance of timeless elegance and modern aesthetics, captivating the hearts of jewelry enthusiasts worldwide. Through her work, Siobhn promotes the importance of eco-friendly practices in the jewelry industry, showcasing the beauty and versatility of recycled materials. Each of her creations tells a unique story, reflecting her passion for both craftsmanship and environmental stewardship.",
+    "location": "Dublin",
+    "website": "www.siobhanmurphy.com",
+    "image": "media/siobhan-murphy_ZbP6UYc.jpg"
+  }
+}
+]
