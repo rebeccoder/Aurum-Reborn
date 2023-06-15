@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'home',
     'creators',
     'testimonials',
+    'products.apps.ProductsConfig',
 ]
 
 MIDDLEWARE = [
