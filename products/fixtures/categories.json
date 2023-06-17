@@ -1,6 +1,6 @@
 [
     {
-      "model": "aurumreborn.category",
+      "model": "products.Category",
       "pk": 1,
       "fields": {
         "name": "Earrings",
@@ -8,7 +8,7 @@
       }
     },
     {
-      "model": "aurumreborn.category",
+      "model": "products.Category",
       "pk": 2,
       "fields": {
         "name": "Necklaces",
@@ -16,7 +16,7 @@
       }
     },
     {
-      "model": "aurumreborn.category",
+      "model": "products.Category",
       "pk": 3,
       "fields": {
         "name": "Bracelets",
@@ -24,7 +24,7 @@
       }
     },
     {
-      "model": "aurumreborn.category",
+      "model": "products.Category",
       "pk": 4,
       "fields": {
         "name": "Rings",
