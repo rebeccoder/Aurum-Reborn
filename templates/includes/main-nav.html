@@ -11,10 +11,10 @@
             </a>
             <div class="dropdown-menu border-0 nav-text" aria-labelledby="collections-link">
                 <a href="{% url 'products' %}" class="dropdown-item nav-text">All Items</a>
-                <a href="" class="dropdown-item nav-text">Earrings</a>
-                <a href="" class="dropdown-item nav-text">Necklaces</a>
-                <a href="" class="dropdown-item nav-text">Bracelets</a>
-                <a href="" class="dropdown-item nav-text">Rings</a>
+                <a href="{% url 'products' %}?category=Earrings" class="dropdown-item nav-text">Earrings</a>
+                <a href="{% url 'products' %}?category=Necklaces" class="dropdown-item nav-text">Necklaces</a>
+                <a href="{% url 'products' %}?category=Bracelets" class="dropdown-item nav-text">Bracelets</a>
+                <a href="{% url 'products' %}?category=Rings" class="dropdown-item nav-text">Rings</a>
             </div>
         </li>
 
