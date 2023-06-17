@@ -392,10 +392,20 @@ header {
   margin-left: 2em;
   text-align: center;
 }
-
 .products-title {
   color:#8B5A2B;
   font-family: 'Playfair', serif;
+}
+
+.product-names {
+  color:#8B5A2B;
+  font-family: 'Playfair', serif;
+}
+
+.product-prices {
+  color:#D4AF37;
+  font-family: 'Raleway', sans-serif;
+  
 }
 /*    -------------------------------- Media Queries */
 

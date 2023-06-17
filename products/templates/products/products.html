@@ -5,14 +5,13 @@
 <div class="container-fluid product-head">
     <div class="row">
         <div class="col text-center mt-3">
-            <h1 class="products-title">Our Collections</h2>
+            <h1 class="products-title">Explore a World of Unique Jewellery</h1>
         </div>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
-
 <div class="row">
     <div class="product-container col-10 offset-1">
         <div class="row mt-1 mb-2"></div>
@@ -21,17 +20,17 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0">
                         {% if product.image %}
-                        <a href="">
+                        <a href="{% url 'product_detail' sku=product.sku %}">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.friendly_name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'product_detail' sku=product.sku %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.friendly_name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0">
-                            <p class="mb-0">{{ product.friendly_name }}</p>
-                            <p class="mb-0">£{{ product.price }}</p>
+                            <p class="mb-0 product-names">{{ product.friendly_name }}</p>
+                            <p class="mb-0 product-prices">£{{ product.price }}</p>
                         </div>
                     </div>
                 </div>
@@ -59,7 +58,4 @@
         </div>
     </div>
 </div>
-</div>
-
-
 {% endblock %}
