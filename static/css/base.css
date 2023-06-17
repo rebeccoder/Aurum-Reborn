@@ -402,10 +402,44 @@ header {
   font-family: 'Playfair', serif;
 }
 
+.product-details-name {
+  color:#D4AF37;
+  font-family: 'Playfair', serif;
+}
+
 .product-prices {
   color:#D4AF37;
   font-family: 'Raleway', sans-serif;
   
+}
+
+.product-description {
+  color:#8B5A2B;
+  font-family: 'Raleway', sans-serif;
+}
+
+.product-price {
+  color: #D4AF37;
+  font-family: 'Playfair', serif;
+  font-size: 1.5em;
+}
+
+.product-karat {
+  color: #D4AF37;
+  font-family: 'Playfair', serif;
+  font-size: 1.5em;
+}
+
+.created-by {
+  color:#8B5A2B;
+  font-family: 'Raleway', sans-serif;
+}
+
+.product-divider {
+  border: none; /* Remove the default border */
+  height: 1px; /* Set the height of the horizontal line */
+  background-color: #CDA3A3; /* Set the background color of the line */
+  margin: 20px 0; /* Add some margin around the line */
 }
 /*    -------------------------------- Media Queries */
 

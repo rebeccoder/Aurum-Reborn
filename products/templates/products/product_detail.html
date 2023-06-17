@@ -3,13 +3,6 @@
 
 {% block page_header %}
 <div class="container-fluid product-head">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h1 class="products-title">
-                product
-            </h2>
-        </div>
-    </div>
 </div>
 {% endblock %}
 
@@ -31,9 +24,20 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                    <p class="mt-3">{{ product.description }}</p>
+                    <h2 class="product-details-name">
+                        {{ product.friendly_name }}
+                    </h2>
+                    <p class="created-by">Created by {{ product.creator }}</p>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="product-price">£{{ product.price }}</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="product-karat">{{ product.karat }} sustainable gold</p>
+                        </div>
+                    </div>
+                    <hr class="product-divider">
+                    <p class="mt-3 product-description">{{ product.description }}</p>
                 </div>
             </div>
         </div>
