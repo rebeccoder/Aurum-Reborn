@@ -441,6 +441,13 @@ header {
   background-color: #CDA3A3; /* Set the background color of the line */
   margin: 20px 0; /* Add some margin around the line */
 }
+
+.product-link {
+  transition: color 0.3s ease
+}
+.product-link:hover {
+  opacity: 0.5;
+}
 /*    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
