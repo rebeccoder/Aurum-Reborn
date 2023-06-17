@@ -14,3 +14,7 @@ class ProductAdmin(admin.ModelAdmin):
             'fields': ('image',),
         }),
     )
+
+@admin.register(Category)
+class CategoriesAdmin(admin.ModelAdmin):
+    list_display = ['name', 'friendly_name']
