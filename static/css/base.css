@@ -386,6 +386,17 @@ header {
   color:#FFFFF0;
   padding: 1.5em;
 }
+
+.product-head {
+  margin-top: 12em;
+  margin-left: 2em;
+  text-align: center;
+}
+
+.products-title {
+  color:#8B5A2B;
+  font-family: 'Playfair', serif;
+}
 /*    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
