@@ -30,6 +30,7 @@ urlpatterns = [
     path('creators/delete/<int:pk>/', CreatorDeleteView.as_view(), name='creator_delete'),
     path('testimonials/', testimonial_list, name='testimonial_list'),
     path('testimonials/', include('testimonials.urls')),
+    path('products/', include('products.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
