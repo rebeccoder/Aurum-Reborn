@@ -454,6 +454,20 @@ header {
   font-family: 'Playfair', serif;
 
 }
+
+.btt-button {
+  height: 42px;
+  width: 42px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.btt-link {
+  cursor: pointer;
+  color:#8B5A2B;
+}
+
 /*    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
