@@ -13,6 +13,23 @@
 
 {% block content %}
 <div class="row">
+    <div class="col-md-3">
+        <div class="sidebar-menu">
+            <div class="dropdown">
+                <button class="custom-submit-button dropdown-toggle" type="button" id="sortDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sort by
+                </button>
+                <div class="dropdown-menu" aria-labelledby="sortDropdown">
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=karat&direction=desc">By Karat</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">By Category</a>
+                    <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
     <div class="product-container col-10 offset-1">
         <div class="row mt-1 mb-2"></div>
         <div class="row">
