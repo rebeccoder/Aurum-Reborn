@@ -448,6 +448,12 @@ header {
 .product-link:hover {
   opacity: 0.5;
 }
+
+.category-tag {
+  color:#CDA3A3;
+  font-family: 'Playfair', serif;
+
+}
 /*    -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

@@ -15,20 +15,23 @@
 <div class="row">
     <div class="col-md-3">
         <div class="sidebar-menu">
+            <h2 class="logo-font">{% if current_categories %}{{ current_categories.0.friendly_name }}{% else %}All Items{% endif %}</h2>
             <div class="dropdown">
                 <button class="custom-submit-button dropdown-toggle" type="button" id="sortDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Sort by
                 </button>
                 <div class="dropdown-menu" aria-labelledby="sortDropdown">
-                    <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">By Price</a>
-                    <a class="dropdown-item" href="{% url 'products' %}?sort=karat&direction=desc">By Karat</a>
-                    <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">By Category</a>
-                    <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category={{ request.GET.category }}&sort=price&direction=asc">By Price (low to high)</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category={{ request.GET.category }}&sort=price&direction=desc">By Price (high to low)</a>
+                    <a class="dropdown-item" href="{% url 'products' %}?category={{ request.GET.category }}&sort=friendly_name&direction=asc">By Name (A-Z)</a>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
 <div class="row">
     <div class="product-container col-10 offset-1">
         <div class="row mt-1 mb-2"></div>
@@ -48,6 +51,11 @@
                         <div class="card-body pb-0">
                             <p class="mb-0 product-names">{{ product.friendly_name }}</p>
                             <p class="mb-0 product-prices">£{{ product.price }}</p>
+                            <p class="small mt-1 mb-0">
+                                <a class="category-tag" href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                </a>
+                            </p>
                         </div>
                     </div>
                 </div>
