@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'testimonials',
     'products.apps.ProductsConfig',
     'bag',
+    'checkout',
 ]
 
 MIDDLEWARE = [
