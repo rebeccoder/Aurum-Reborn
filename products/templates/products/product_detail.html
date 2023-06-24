@@ -42,30 +42,9 @@
                         </div>
                     </div>
                     <p class="mt-3 product-description">{{ product.description }}</p>
-                    {% with product.has_sizes as a %}
-                    {% if a %}
-                    <div class="col-12">
-                        <p><strong>Size:</strong></p>
-                        <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
-                            <option value="a" selected>A</option>
-                            <option value="b">B</option>
-                            <option value="c">C</option>
-                            <option value="d">D</option>
-                            <option value="e">E</option>
-                            <option value="f">F</option>
-                            <option value="g">G</option>
-                            <option value="h">H</option>
-                            <option value="i">I</option>
-                            <option value="j">J</option>
-                            <option value="k">K</option>
-                            <option value="l">L</option>
-                            <option value="m">M</option>
-                            <option value="n">N</option>
-                            <option value="o">O</option>
-                            <option value="p">P</option>
-                            <option value="q">Q</option>
-                        </select>
-                        {% endif %}
+
+                    <form class="form" action="{% url 'add_to_bag' product.sku %}" method="POST">
+                        {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
@@ -75,7 +54,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col{% if s %}-12 mt-2{% endif %}">
+
+                            <div class="col-12">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
@@ -85,7 +65,6 @@
                                 <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            {% endwith %}
                         </div>
                     </form>
                 </div>
