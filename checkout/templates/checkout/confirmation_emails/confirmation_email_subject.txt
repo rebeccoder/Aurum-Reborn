@@ -1,0 +1,1 @@
+Your Aurum Reborn Order Confirmation for Order Number {{ order.order_number }}
