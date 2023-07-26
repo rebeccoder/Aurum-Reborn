@@ -17,7 +17,6 @@ class Product(models.Model):
     name = models.CharField(max_length=100)
     friendly_name = models.CharField(max_length=100)
     description = models.TextField()
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
     price = models.DecimalField(max_digits=8, decimal_places=2)
     karat = models.CharField(max_length=100)
     creator = models.ForeignKey('creators.Creator', on_delete=models.CASCADE)
