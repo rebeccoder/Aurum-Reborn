@@ -66,15 +66,6 @@ def checkout(request):
                             quantity=item_data,
                         )
                         order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database. "
@@ -133,6 +124,7 @@ def checkout(request):
     }
 
     return render(request, template, context)
+
 
 
 def checkout_success(request, order_number):
