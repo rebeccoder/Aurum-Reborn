@@ -51,14 +51,14 @@
   <div class="row">
     {% for creator in creators %}
       <div class="col-md-4">
-        <img src="{{ creator.image }}" alt="{{ creator.name }}" class="img-fluid hover-image">
+        <img src="{{ MEDIA_URL }}{{ creator.image }}" alt="{{ creator.name }}" class="img-fluid hover-image">
         <a href="#">{{ creator.name }}</a>
       </div>
     {% endfor %}
   </div>
   <div class="row">
     <div class="col-md-4 offset-md-4 text-center mt-3">
-      <a href="{% url 'creators' %}"class="main-button">Meet Our Creators</a>
+      <a href="{% url 'creators' %}" class="main-button">Meet Our Creators</a>
     </div>
   </div>
 </div>
