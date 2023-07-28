@@ -6,11 +6,6 @@
 
 {% block content %}
 <div class="container pt-5">
-    <div class="row">
-        <!-- Empty header for spacing -->
-    </div>
-</div>
-<div class="container pt-5">
 <section class="company-section">
     <div class="company-info">
       <h2 class="home-title">Handcrafted Gold, Ethically Recycled.<br> Adorning You with Timeless Beauty</h2>
@@ -38,7 +33,7 @@
 <div class="container pt-5">
   <section class="company-section">
     <div class="company-info">
-      <h2 class="home-title">Because Your Jewelry Should Reflect Your Values:.<br> Discover the Elegance of Ethical Gold.</h2>
+      <h2 class="home-title">Because Your Jewellery Should Reflect Your Values:.<br> Discover the Elegance of Ethical Gold.</h2>
       <p class="home-description">We believe that the jewelry you wear should not only be stunning but also align with your values. That's why we have curated a collection of exquisite pieces made from ethical gold, ensuring that every creation carries a story of sustainability and responsibility. Our commitment to ethical sourcing means that you can adorn yourself with elegance, knowing that your jewelry has been crafted with integrity and care. Experience the joy of wearing jewelry that not only complements your style but also reflects your commitment to a better world. Discover the timeless beauty of ethical gold and embrace a new standard of conscious luxury.</p>
     </div>
     <div class="company-image">
@@ -64,25 +59,20 @@
 </div>
 
 
-
-<section class="company-section">
-  <div class="container pt-5">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="company-info">
-          <h2 class="home-title">Testimonials</h2>
-          <p class="home-description">
-            Hear what our customers have to say about their experience with our products and services. We take pride in providing exceptional quality and craftsmanship that exceeds expectations.
-          </p>
-          <a href="" class="discover-button">See Our Testimonials</a>
-        </div>
+<div class="container pt-5">
+  <section class="company-section">
+      <div class="company-info">
+        <h2 class="home-title">Testimonials</h2>
+        <p class="home-description">
+          Hear what our customers have to say about their experience with our products and services. We take pride in providing exceptional quality and craftsmanship that exceeds expectations.
+        </p>
+        <a href="{% url 'testimonials:testimonial_list' %}" class="main-button">See Our Testimonials</a>
       </div>
       <div class="company-image hover-image">
         <img src="media/testimonials-home.jpg" alt="Testimonials Image">
       </div>
-    </div>
+    </section>
   </div>
-</section>
 
 <section class="newsletter-section">
 <div id="mc_embed_shell">
