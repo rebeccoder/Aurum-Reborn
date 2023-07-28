@@ -3,15 +3,8 @@
 {% block content %}
 
 <div class="testimonials-head">
-  <div class="flash-message">
-    {% if messages %}
-      {% for message in messages %}
-        <div class="messages {% if message.tags %}{{ message.tags }}{% endif %}">{{ message }}</div>
-      {% endfor %}
-    {% endif %}
-  </div>
-  <img src="../media/testimonials-image.jpg" class="testimonials-image">
   <h1 class="testimonials-title">Testimonials</h2>
+  <img src="../media/testimonials-image.jpg" class="testimonials-image"><br>
 {% if user.is_authenticated %}
 <a href="{% url 'testimonials:testimonial_create' %}" class="main-button">Add Testimonial</a>
 {% endif %}
