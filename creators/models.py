@@ -9,7 +9,7 @@ class Creator(models.Model):
     bio = models.TextField()
     location = models.CharField(max_length=255)
     website = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='media')
+    image = models.ImageField(upload_to='creators/', default='default_image.jpg')
     
 
     def __str__(self):
