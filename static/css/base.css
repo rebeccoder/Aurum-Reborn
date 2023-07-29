@@ -17,7 +17,12 @@ header {
     color: #8B5A2B !important;
     font-family: 'Playfair', serif;
     font-size: 50px;
-    
+}
+
+.mobile-logo {
+  color: #8B5A2B;
+  font-family: 'Playfair', serif;
+  font-size: 20px;
 }
 
 .delivery-banner {
@@ -49,7 +54,11 @@ header {
     color: #8B5A2B !important;
 
 }
-  
+
+.fas.fa-search {
+  color: #8B5A2B !important;
+}
+
 .nav-text {
     color: #8B5A2B !important;
     font-family: 'Playfair Display', serif;
@@ -61,6 +70,17 @@ header {
     font-family: 'Playfair Display', serif;
     transition: color 0.3s;
 }
+
+.navbar-toggler {
+  border: none !important;
+  color:#8B5A2B !important;
+}
+
+.nav-link.nav-icons:active,
+.nav-link.nav-icons:focus {
+  color: #CDA3A3 !important;
+}
+
 
 .company-section {
     display: flex;
@@ -545,16 +565,6 @@ header {
   overflow-x: hidden;
   overflow-y: auto;
 }
-
-/*    -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-      max-width: 80%;
-    }
-
-  }
   
   /* Allauth form formatting */
 
@@ -610,6 +620,28 @@ color: #fff;
 color: #17a2b8; /* text-info */
 }
 
+.form-label {
+  font-family: 'Playfair Display', serif;
+  font-size: large;
+  color: #8B5A2B
+}
+
+/*    -------------------------------- Media Queries */
+  /* Custom CSS for mobile navigation */
+  @media (max-width: 1000px) {
+
+    .delivery-banner {
+    font-size: 18px;
+  }
+}
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+
+}
   /* fixed top navbar only on medium and up */
   @media (min-width: 992px) {
       .fixed-top-desktop-only {
@@ -625,8 +657,3 @@ color: #17a2b8; /* text-info */
       }
 }
 
-.form-label {
-  font-family: 'Playfair Display', serif;
-  font-size: large;
-  color: #8B5A2B
-}
