@@ -3,23 +3,25 @@
 {% block content %}
 
 <div class="testimonials-head">
-  <h1 class="testimonials-title">Testimonials</h2>
-  <img src="../media/testimonials-image.jpg" class="testimonials-image"><br>
-{% if user.is_authenticated %}
-<a href="{% url 'testimonials:testimonial_create' %}" class="main-button">Add Testimonial</a>
-{% endif %}
-
+  <h1 class="testimonials-title">Testimonials</h1>
+  <img src="../media/testimonials-image.jpg" class="testimonials-image" alt="Testimonials Image"><br>
+  {% if user.is_authenticated %}
+  <a href="{% url 'testimonials:testimonial_create' %}" class="main-button">Add Testimonial</a>
+  {% endif %}
 </div>
+
 <div class="testimonial-container">
   {% for testimonial in testimonials %}
   <div class="testimonial-card">
     <div class="testimonial-content">
       <h3 class="testimonial-card-title">{{ testimonial.title }}</h3>
-      <p>{{ testimonial.testimonial }}</p>
-      <p>Rating: {{ testimonial.rating }}</p>
+      <p class="testimonial-text">{{ testimonial.testimonial }}</p>
+      <p class="testimonial-rating">Rating: {{ testimonial.rating }}</p>
       {% if request.user == testimonial.user %}
-      <a class="testimonials-links" href="{% url 'testimonials:testimonial_edit' testimonial.id %}">Edit</a>
-      <a class="testimonials-links" href="{% url 'testimonials:testimonial_delete' testimonial.id %}">Delete</a>
+      <div class="testimonial-links">
+        <a class="edit-link" href="{% url 'testimonials:testimonial_edit' testimonial.id %}">Edit</a>
+        <a class="delete-link" href="{% url 'testimonials:testimonial_delete' testimonial.id %}">Delete</a>
+      </div>
       {% endif %}
     </div>
   </div>

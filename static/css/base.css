@@ -352,40 +352,56 @@ header {
 .testimonials-image:hover {
   opacity: 0.9;
 }
-
 .testimonial-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .testimonial-card {
-  margin: 2em;
-  margin-top: 3em;
   background-color: #FFFFF0;
-  padding: 20px;
-  border: 1px solid #8B5A2B;
-}
-
-.testimonial-content {
-  text-align: center;
-  color:#8B5A2B;
-  font-family:'Josefin Sans', sans-serif;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 1px #8B5A2B;
+  width: 45%;
+  margin: 1rem;
 }
 
 .testimonial-card-title {
-  text-align: center;
-  color:#D4AF37;
-  font-family: 'Playfair', serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #8B5A2B;
+  margin-bottom: 1rem;
 }
 
-.testimonials-links {
-  font-family: 'Playfair', serif;
-  color:#699C6B;
+.testimonial-text {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
 }
 
-.testimonials-links:hover {
-  color:#CDA3A3
+.testimonial-rating {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.testimonial-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.edit-link,
+.delete-link {
+  font-size: 1rem;
+  color: #8B5A2B;
+  text-decoration: none;
+}
+
+.edit-link:hover,
+.delete-link:hover {
+  text-decoration: underline;
 }
 
 .product-head {
@@ -629,7 +645,7 @@ color: #17a2b8; /* text-info */
 
 /*    -------------------------------- Media Queries */
   /* Custom CSS for mobile navigation */
-  @media (max-width: 600px) {
+  @media (max-width: 767px) {
 
     body {
       overflow-x: hidden;
@@ -680,7 +696,29 @@ color: #17a2b8; /* text-info */
     padding: 10px;
 }
 
+  .creator-image {
+    margin: 1em auto;
+    max-height: 100%;
+    margin-top: 3em;
+  }
 
+  .creator-header {
+    margin-left: 0px;
+  }
+
+  .testimonials-head {
+    margin-left: 0px;
+  }
+
+  .testimonials-image {
+    height:auto;
+    max-width: 100%;
+  }
+
+  .testimonial-card {
+    width: 100%;
+  }
+  
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
