@@ -2,69 +2,70 @@
 {% load static %}
 
 {% block page_header %}
-<div class="container-fluid product-head">
-    <div class="row">
-        <div class="col text-center mt-3">
-            <h1 class="products-title">Explore a World of Unique Jewellery</h1>
+<div class="product-head">
+        <div class="text-center">
+            <h2 class="products-title">Explore a World of Unique Jewellery</h2>
         </div>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-2">
-        <div class="sidebar-menu">
-            <h2 class="logo-font">{% if current_categories %}{{ current_categories.0.friendly_name }}{% else %}All Items{% endif %}</h2>
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="sidebar-menu">
+                <h4 class="logo-font">{% if current_categories %}{{ current_categories.0.friendly_name }}{% else %}All Items{% endif %}</h2>
 
-            <div class="sort-select-wrapper">
-                <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                </select>
-                <button id="reset-button" class="btn btn-sm btn-outline-secondary ml-2">Reset</button>
+                <div class="sort-select-wrapper">
+                    <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                    </select>
+                    <button id="reset-button" class="btn btn-sm btn-outline-secondary ml-2">Reset</button>
+                </div>
+
+                <p class="text-muted mt-3 text-center text-md-left">
+                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
             </div>
-
-            <p class="text-muted mt-3 text-center text-md-left">
-                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-            </p>
         </div>
-    </div>
 
-    <div class="col-md-10">
-        <div class="row">
-            {% for product in products %}
-            <div class="col-sm-6 col-md-4 mb-4">
-                <div class="card h-100 border-0">
-                    {% if product.image %}
-                    <a href="{% url 'product_detail' sku=product.sku %}">
-                        <img class="card-img-top img-fluid product-link" src="{{ product.image.url }}" alt="{{ product.friendly_name }}">
-                    </a>
-                    {% else %}
-                    <a href="{% url 'product_detail' sku=product.sku %}">
-                        <img class="card-img-top img-fluid product-link" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.friendly_name }}">
-                    </a>
-                    {% endif %}
-                    <div class="card-body pb-0">
-                        <p class="mb-0 product-names">{{ product.friendly_name }}</p>
-                        <p class="mb-0 product-prices">£{{ product.price }}</p>
-                        <p class="small mt-1 mb-0">
-                            <a class="category-tag" href="{% url 'products' %}?category={{ product.category.name }}">
-                                <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                            </a>
-                        </p>
-                    {% if request.user.is_superuser %}
-                        <small class="ml-3">
-                            <a href="{% url 'edit_product' product.sku %}">Edit</a> | 
-                            <a class="text-danger" href="{% url 'delete_product' product.sku %}">Delete</a>
-                        </small>
-                    {% endif %}
+        <div class="col-md-10">
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-6 col-md-4 mb-4">
+                    <div class="card h-100 border-0">
+                        {% if product.image %}
+                        <a href="{% url 'product_detail' sku=product.sku %}">
+                            <img class="card-img-top img-fluid product-link" src="{{ product.image.url }}" alt="{{ product.friendly_name }}">
+                        </a>
+                        {% else %}
+                        <a href="{% url 'product_detail' sku=product.sku %}">
+                            <img class="card-img-top img-fluid product-link" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.friendly_name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <p class="mb-0 product-names">{{ product.friendly_name }}</p>
+                            <p class="mb-0 product-prices">£{{ product.price }}</p>
+                            <p class="small mt-1 mb-0">
+                                <a class="category-tag" href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                </a>
+                            </p>
+                        {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="{% url 'edit_product' product.sku %}">Edit</a> | 
+                                <a class="text-danger" href="{% url 'delete_product' product.sku %}">Delete</a>
+                            </small>
+                        {% endif %}
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </div>

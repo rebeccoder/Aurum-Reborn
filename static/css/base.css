@@ -393,6 +393,7 @@ header {
   margin-left: 50px;
   text-align: center;
 }
+
 .products-title {
   color:#8B5A2B;
   font-family: 'Playfair', serif;
@@ -665,7 +666,20 @@ color: #17a2b8; /* text-info */
   .footer-links {
     text-align: center;
   }
+
+  .product-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin:0;
+  }
+  
+  .products-title {
+    font-size: 40px;
+    padding: 10px;
 }
+
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -689,3 +703,4 @@ color: #17a2b8; /* text-info */
       }
 }
 
+}
