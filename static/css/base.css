@@ -404,6 +404,36 @@ header {
   text-decoration: underline;
 }
 
+
+.testimonial-form label {
+  font-weight: bold;
+  color: #8B5A2B;
+}
+
+.testimonial-form .form-control {
+  border-color: #8B5A2B;
+  border-radius: 0;
+  color: #333;
+}
+
+.testimonial-form textarea.form-control {
+  resize: none;
+}
+
+.testimonial-form button[type="submit"] {
+  background-color: #8B5A2B;
+  border-color: #8B5A2B;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-form button[type="submit"]:hover {
+  background-color: #72431F;
+}
+
+.space {
+  margin-bottom: 30px;
+}
 .product-head {
   margin-top: 50px;
   margin-left: 50px;
