@@ -628,10 +628,42 @@ color: #17a2b8; /* text-info */
 
 /*    -------------------------------- Media Queries */
   /* Custom CSS for mobile navigation */
-  @media (max-width: 1000px) {
+  @media (max-width: 600px) {
+
+    body {
+      overflow-x: hidden;
+    }
 
     .delivery-banner {
     font-size: 18px;
+  }
+
+  .mobile-company-section {
+    max-width: 100%;
+  }
+
+  .mobile-image {
+    max-width: 100%;
+    margin-top: 10px;
+  }
+
+  .home-title {
+    font-weight: lighter;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .home-description {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    display: none;
+  }
+
+  .footer-links {
+    text-align: center;
   }
 }
 
