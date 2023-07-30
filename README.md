@@ -308,3 +308,49 @@ Incorporating a live chat system for customer care, enabling users to communicat
 | grand_total     | DecimalField          | The grand total cost of the order (including delivery). |
 | original_bag    | TextField             | A text field storing the original bag information.  |
 | stripe_pid      | CharField             | Stripe payment ID associated with the order.       |
+
+## Technology Used
+
+### Languages
+
+- HTML
+- CSS
+- Javascript
+- [Python](https://www.python.org/)
+
+### Frameworks
+
+- [Django](https://www.djangoproject.com/)
+- [Bootstrap](https://getbootstrap.com/)
+
+### Libraries
+
+- [Jquery](https://jquery.com/)
+- [Stripe Payments](https://stripe.com/)
+
+### Tools
+
+- [ElephantSQL](https://www.elephantsql.com/)
+- [Heroku](https://www.heroku.com)
+- [Git](https://git-scm.com/)
+- [Postgres](https://www.postgresql.org/)
+
+## Testing
+
+No automated testing has been used on this project, Instead all the testing has been done manually and through numerous user experiences.
+
+<strong> Navigation and Site Flow:</strong> Tested how easily users can navigate through the website, find products, and access different sections. Check if the site flow makes sense and is intuitive for users by navigating through all the pages and make sure all the links are working so that a user doesn't get stuck anywhere.
+
+<strong>Checkout Process:</strong> Tested the checkout process to see if it's straightforward, secure, and doesn't have any barriers that might discourage users from completing their purchases. I did this by using Test Cards provided by stripe and going through the whole checkout process multiple times with different items and card details.
+
+<strong>Search Functionality:</strong> Verified that the search feature works effectively and provides relevant results to help users find what they're looking for quickly.
+
+<strong>Product Filtering and Sorting:</strong> Tested how users interact with the product filtering and sorting options to refine their search results based on their preferences made sure that it was correctly displaying the products as per the requested filters and sorting choice.
+
+<strong>Creator Page Usability:</strong> Evaluated how easily users can access and explore the creator's page, view their information, and understand the stories behind the creators. Did this as an admin too and went through the editing and deleting processes to make sure they're all working
+
+<strong>Testimonials:</strong> Went through the testimonial process from start to finish as a logged in user and also logged into other accounts to make sure that only the logged in user who added the testimony can access the edit and delete pages.
+
+<strong>Performance and Load Times:</strong> Evaluated the sites loading time, it was very slow and needed to compress all the images and reupload them. This has drastically improved the speed of the website.
+
+<strong>Toast Messages:</strong> Ensured all toast messages display as and when expected, they are fully functioning for users to interact with and they are consistent and easily noticeable.
