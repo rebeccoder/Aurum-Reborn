@@ -118,7 +118,7 @@ WSGI_APPLICATION = 'aurum_reborn.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# postgres://hjjhhjwl:EmWgV_aTLnG0pPgiE4KDyxVoHfrLPMX0@trumpet.db.elephantsql.com/hjjhhjwl
 
 DATABASES = {
     'default': {
@@ -126,8 +126,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
