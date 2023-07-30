@@ -354,3 +354,21 @@ No automated testing has been used on this project, Instead all the testing has 
 <strong>Performance and Load Times:</strong> Evaluated the sites loading time, it was very slow and needed to compress all the images and reupload them. This has drastically improved the speed of the website.
 
 <strong>Toast Messages:</strong> Ensured all toast messages display as and when expected, they are fully functioning for users to interact with and they are consistent and easily noticeable.
+
+### Responsiveness Testing
+
+To ensure a smooth user experience across various devices, specific scenarios and devices were used to evaluate different aspects of the website's adaptability:
+
+<strong>Laptop and Desktop Testing:</strong> The website was tested on laptops and desktop computers with various screen sizes, ranging from 13 inches to 27 inches. This testing covered scenarios like resizing the browser window and checking for layout adjustments at different resolutions.
+
+<strong>Mobile Devices:</strong> Testing was conducted on popular smartphones and tablets, including iPhone and Android devices. Different screen sizes, orientations, and touch interactions were analyzed.
+
+<strong>Google Chrome Dev Tools:</strong> Utilizing Google Chrome Dev Tools, the website's responsiveness was tested on a wide range of emulated devices, including iPhones, iPads, Android phones, and tablets. The "Device Toolbar" feature allowed for detailed examination of layout and functionality on simulated devices.
+
+<strong>Cross-Browser Compatibility:</strong> The website was tested on multiple browsers, including Google Chrome, Mozilla Firefox, Safari, and Microsoft Edge. This verification process ensured a consistent user experience, irrespective of the browser used.
+
+<strong>Touch-Friendly Elements:</strong> Interactive elements, such as buttons and navigation menus, were thoroughly tested for touch responsiveness on touch-enabled devices to guarantee a seamless experience for mobile users.
+
+<strong>Toast Messages:</strong> The behavior of toast messages, used for displaying alerts and notifications, was examined on various devices to ensure they appeared and disappeared correctly and did not disrupt the user experience.
+
+<strong>Forms and Inputs:</strong> Testing involved checking the behavior of form elements and inputs, such as text fields and dropdowns, on both desktop and mobile devices to ensure they were easy to interact with and provided appropriate feedback.
