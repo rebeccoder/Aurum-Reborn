@@ -2,18 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Playfair:wght@500&display=swap');
 
 /* Body and Header */
+
 body {
     background-color: #FFFFF0;
     height: calc(100vh - 164px);
     color: black;
     display: flex;
     flex-direction: column;
+    padding-right: 0;
+    padding-left: 0;
 }
 
 header {
     background-color: #FFFFF0;
 }
 
+  
 /* Logo and Mobile Logo */
 .logo-font {
     color: #8B5A2B !important;
@@ -37,7 +41,6 @@ header {
     font-family: 'Playfair', serif;
     background-color: #CDA3A3;
     color: #FFFFF0;
-    padding-bottom: 2px;
 }
 
 .close-btn {
@@ -48,6 +51,7 @@ header {
     font-family: 'Playfair Display', serif;
     border: none;
     cursor: pointer;
+    font-size: smaller;
 }
 
 /* Hidden Class */
@@ -481,6 +485,22 @@ header {
   .mobile-company-section {
     max-width: 100%;
   }
+
+  .mobile-nav {
+    background-color: #FFFFF0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden; 
+  }
+  
 
   .mobile-image {
     max-width: 100%;
