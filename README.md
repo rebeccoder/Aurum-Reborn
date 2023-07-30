@@ -372,3 +372,62 @@ To ensure a smooth user experience across various devices, specific scenarios an
 <strong>Toast Messages:</strong> The behavior of toast messages, used for displaying alerts and notifications, was examined on various devices to ensure they appeared and disappeared correctly and did not disrupt the user experience.
 
 <strong>Forms and Inputs:</strong> Testing involved checking the behavior of form elements and inputs, such as text fields and dropdowns, on both desktop and mobile devices to ensure they were easy to interact with and provided appropriate feedback.
+
+### Bugs
+* <strong>Problem:</strong> Mobile Logo Display
+* <strong>Cause:</strong> The mobile logo was not displaying on mobile screens due to missing responsive classes.
+* <strong>Solution:</strong> Add the appropriate responsive classes (d-block d-lg-none) to the logo element to show it only on small screens and hide it on larger screens.
+
+---
+
+* <strong>Problem:</strong> Navbar Misplacement
+* <strong>Cause:</strong> After hiding the mobile logo, the navbar was shifted to the left, likely due to the hidden element's layout.
+* <strong>Solution:</strong> Instead of using `display: none` to hide the logo, use `visibility: hidden` to keep the layout structure intact.
+
+---
+
+* <strong>Problem:</strong> Missing Logo on Mobile
+* <strong>Cause:</strong> The logo was not showing on mobile screens even after applying responsive classes.
+* <strong>Solution:</strong> Check for CSS conflicts or other custom styles that might be affecting the visibility of the logo. Use browser developer tools to inspect the element and ensure no other styles are overriding the visibility.
+
+---
+
+* <strong>Problem:</strong> Hidden Elements Still Displaying
+* <strong>Cause:</strong> After hiding certain elements on mobile screens, some elements like the search bar and font-awesome icons were still visible.
+* <strong>Solution:</strong> Add the appropriate responsive classes (d-block d-lg-none or d-none d-lg-block) to hide or show elements on specific screen sizes as needed.
+
+---
+
+* <strong>Problem:</strong> Mobile Navigation Redesign
+* <strong>Cause:</strong> The requirement was to redesign the mobile navigation to have all elements (burger icon, logo, search icon, profile icon, and shopping bag icon) on one line.
+* <strong>Solution:</strong> Restructure the HTML and use flexbox classes like d-flex, justify-content-between, and align-items-center to align the elements in a single line.
+
+
+### Unresolved Issues
+
+
+## Deployment
+
+## Credits
+
+### Content
+All Content used is original content by the creator of Aurum Reborn
+
+### Media
+
+Images used on website were from:
+
+- [Unsplash](https://unsplash.com/)
+
+- [Pixabay](https://pixabay.com/)
+
+- [Pexels.com](https://www.pexels.com/)
+
+### Code
+
+- The project closely follows the code in The Code Institutes Boutique Ado project. 
+
+### Acknowledgements
+
+- My mentor Richard Wells for all his wisdom
+- My parents for the support :)
