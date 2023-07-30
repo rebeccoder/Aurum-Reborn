@@ -69,9 +69,9 @@ Thank you for visiting Aurum Reborn. Feel free to reach out with any feedback or
 - Write, Edit, and Delete Testimonials: Visitors want the ability to share their experiences with the jewellery and the brand by writing testimonials. They also desire the option to edit or delete their testimonials if they wish to update their feedback or remove it later.
 
 
-### User Stories
+## User Stories
 
-#### Customers 
+### Customers 
 
 - As a new visitor, I want to easily navigate through different jewelry categories, so I can quickly find the type of jewelry I am interested in.
 - As a potential customer, I want to view detailed product images and descriptions, so I can make informed decisions about which jewelry piece to purchase.
@@ -82,18 +82,18 @@ Thank you for visiting Aurum Reborn. Feel free to reach out with any feedback or
 - As a busy professional, I want a straightforward and secure checkout process, so I can complete my purchase quickly and without any hassle.
 - As a mobile user, I want the website to be responsive and mobile-friendly, so I can browse and shop for jewelry conveniently from my smartphone or tablet.
 
-#### Admin
+### Admin
 
 - As an admin user i want to be able to add, edit and delete products easily.
 - As an admin user i want to be able to manage orders in a simple and easy manner.
 - As an admin user i want to be able to add, edit and delete users easily.
 
-### Design Choices 
+## Design Choices 
 
 The design choices for Aurum Reborn's website were inspired by a wide range research of other high-end jewellery websites. I sought to create a minimalistic and elegant platform, exuding a touch of luxury and femininity. The choice of a refined gold and rosey color palette adds a sense of opulence, while maintaining a balanced and sophisticated look throughout the site. By observing successful design elements from the industry and infusing my own artistic touch, the websites aim to offer visitors an immersive and captivating experience that beautifully showcases the collection of exquisite jewellery pieces.
 
 
-#### Colours
+### Colours
 ![Colour Pallet](media/readme/colour-pallet.png)
 
 #FFFFF0 was the chosen background colour as well as header and footer colour for the website.
@@ -104,23 +104,23 @@ The design choices for Aurum Reborn's website were inspired by a wide range rese
 
 #699C6B was also used as an accent colour for buttons and hovering
 
-#### Fonts
+### Fonts
 - Playfair (Serif): Used for various headings and logo fonts. It provides an elegant and traditional look.
 - Raleway (Sans-serif): Used for some descriptive text. Raleway is a clean and modern sans-serif font.
 - Josefin Sans (Sans-serif): Used for the main buttons. Josefin Sans is a geometric sans-serif font with a friendly appearance.
 - Cormorant Garamond (Serif): Used for the home title. It is a stylish and versatile serif font with a touch of modernity.
 
-#### Layout and Imagery
+### Layout and Imagery
 
 The website follows a responsive layout, ensuring a seamless user experience across various devices and screen sizes.
 To maintain a sense of femininity and glamour, carefully curated images of exquisite jewellery pieces and feminine, beautiful women are showcased with hover effects to enhance user engagement.
 The minimalist design approach ensures that the focus remains on the products, allowing users to explore the jewellery collection effortlessly.
 
-#### Inspiration
+### Inspiration
 
 The design choices for Aurum Reborn were influenced by extensive research and analysis of other high-end jewellery websites. By observing successful design elements in the industry, the website's aesthetics were refined to align with contemporary standards.
 
-#### Wireframes
+### Wireframes
 
 <details>
   <summary>Home Page</summary>
@@ -149,9 +149,9 @@ The design choices for Aurum Reborn were influenced by extensive research and an
 </details>
 
 
-### Features
+## Features
 
-#### Existing Features
+### Existing Features
 
 <details>
   <summary>The stunning homepage for Aurum Reborn has an allure of conscious luxury. Where users can discover the shops collections, meet the talented creators, read the testimonials, and subscribe to the newsletter for the latest updates. This beautiful design reflects the brands commitment to timeless elegance and ethical values.
@@ -218,7 +218,7 @@ The design choices for Aurum Reborn were influenced by extensive research and an
   ![Mobile Site](media/readme/mobile-site.jpg)
 </details>
 
-#### Future Goals
+### Future Goals
 
 If this project went live, the future goals for the website would include:
 
@@ -231,3 +231,80 @@ Incorporating a live chat system for customer care, enabling users to communicat
 - Implementing a referral program to reward customers for referring friends and family to the website.
 - Conducting regular security audits and implementing best practices to ensure customer data protection and website security.
 - Introducing a loyalty program to reward repeat customers and encourage brand loyalty.
+
+## Information Architecture
+
+### Data Storage
+
+#### User Table
+
+| Field                    | Type             | Description                                                      |
+|--------------------------|------------------|------------------------------------------------------------------|
+| user                     | OneToOneField    | A reference to the related `User` model representing the user.  |
+| default_phone_number     | CharField        | User's default phone number for delivery information.            |
+| default_street_address1  | CharField        | User's default street address line 1 for delivery information.   |
+| default_street_address2  | CharField        | User's default street address line 2 for delivery information.   |
+| default_town_or_city     | CharField        | User's default town or city for delivery information.            |
+| default_county           | CharField        | User's default county for delivery information.                  |
+| default_postcode         | CharField        | User's default postcode for delivery information.                |
+| default_country          | CountryField     | User's default country for delivery information.                 |
+
+
+#### Product Table
+
+| Field           | Type               | Description                                                     |
+|-----------------|--------------------|-----------------------------------------------------------------|
+| sku             | CharField          | SKU (Stock Keeping Unit) for the product. Primary key.          |
+| category        | ForeignKey         | A reference to the related `Category` model for product category.|
+| name            | CharField          | Name of the product.                                            |
+| friendly_name   | CharField          | A friendly name for the product.                                |
+| description     | TextField          | Description of the product.                                     |
+| price           | DecimalField       | Price of the product.                                           |
+| karat           | CharField          | Karat information for the product.                              |
+| creator         | ForeignKey         | A reference to the related `Creator` model for the product.     |
+| image           | ImageField         | Image field to store the product's image.                       |
+
+
+#### Testimonials Table
+
+| Field        | Type             | Description                                       |
+|--------------|------------------|---------------------------------------------------|
+| user         | ForeignKey       | A reference to the related `User` model for the user who wrote the testimonial. |
+| title        | CharField        | Title of the testimonial.                        |
+| testimonial  | TextField        | The content of the testimonial.                  |
+| rating       | IntegerField     | The rating given by the user (out of 5).         |
+
+
+#### Creators Table
+
+| Field       | Type              | Description                                  |
+|-------------|-------------------|----------------------------------------------|
+| id          | BigAutoField      | The primary key for the Creator model.      |
+| name        | CharField         | The name of the creator.                    |
+| bio         | TextField         | The bio/description of the creator.         |
+| location    | CharField         | The location of the creator.                |
+| website     | CharField         | The website URL of the creator.             |
+| image       | ImageField        | The image of the creator.                   |
+
+
+#### Orders Table
+
+| Field           | Type                  | Description                                         |
+|-----------------|-----------------------|-----------------------------------------------------|
+| order_number    | CharField             | Random, unique order number (UUID).                |
+| user_profile    | ForeignKey (UserProfile)| The user profile associated with the order.        |
+| full_name       | CharField             | The full name of the customer placing the order.   |
+| email           | EmailField            | The email address of the customer.                 |
+| phone_number    | CharField             | The phone number of the customer.                  |
+| country         | CountryField          | The country where the order is being placed.       |
+| postcode        | CharField             | The postcode of the delivery address.              |
+| town_or_city    | CharField             | The town or city of the delivery address.          |
+| street_address1 | CharField             | The first line of the delivery address.            |
+| street_address2 | CharField             | The second line of the delivery address (optional).|
+| county          | CharField             | The county of the delivery address (optional).     |
+| date            | DateTimeField         | The date and time when the order is created.       |
+| delivery_cost   | DecimalField          | The delivery cost for the order.                   |
+| order_total     | DecimalField          | The total cost of the order before delivery.       |
+| grand_total     | DecimalField          | The grand total cost of the order (including delivery). |
+| original_bag    | TextField             | A text field storing the original bag information.  |
+| stripe_pid      | CharField             | Stripe payment ID associated with the order.       |
