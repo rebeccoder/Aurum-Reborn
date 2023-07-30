@@ -18,7 +18,6 @@ Thank you for visiting Aurum Reborn. Feel free to reach out with any feedback or
 
 2. [Features](#features)
     - [Existing Features](#exisiting-features)
-
     - [Future Goals](#future-goals)
 
 3. [Information Architecture](#information-architecture)
@@ -210,7 +209,25 @@ The design choices for Aurum Reborn were influenced by extensive research and an
 <details>
   <summary>The Checkout App is the final stop on Aurum Reborn's user-friendly shopping journey. Seamlessly integrating with the website, the Checkout App streamlines the purchasing process with an intuitive and pre-filled checkout form for existing users. New users can easily provide their details for a swift and hassle-free checkout. As customers review their order summary, the Checkout App automatically applies any shipping cost reductions or discounts, ensuring transparency and accuracy in the final purchase amount. To guarantee secure and efficient transactions, the app leverages Stripe Payments, allowing customers to confidently complete their purchases. Once payment is processed successfully, customers are directed to a Success Page, assuring them that their order has been confirmed.</summary>
   
-  ![Testimonials](media/readme/checkout.jpg)
+  ![Checkout](media/readme/checkout.jpg)
 </details>
 
+<details>
+  <summary>The entire website is responsive across many devices and each pages style has been adapted to best suit different screen sizes. The homepage for smaller screens such as phones and tablets has been especially tailered for the best user experience. The website will automatically send mobile users to this version of the homepage, it can also be accessed through Google Chrome Developer tools as long as the cache is refreshed. </summary>
 
+  ![Mobile Site](media/readme/mobile-site.jpg)
+</details>
+
+#### Future Goals
+
+If this project went live, the future goals for the website would include:
+
+- Implementing a carousel feature for product images, allowing customers to view multiple angles and details of each item.
+- Introducing shipment tracking, providing customers with real-time updates and enhancing their shopping experience.
+Incorporating a live chat system for customer care, enabling users to communicate with support representatives in real-time for immediate assistance.
+- Expanding the product range to offer a diverse selection of jewelry, catering to a broader audience.
+- Integrating a wish list feature, enabling users to save their favorite items for future reference.
+- Offering personalized recommendations based on user preferences and purchase history.
+- Implementing a referral program to reward customers for referring friends and family to the website.
+- Conducting regular security audits and implementing best practices to ensure customer data protection and website security.
+- Introducing a loyalty program to reward repeat customers and encourage brand loyalty.
