@@ -411,7 +411,7 @@ To ensure a smooth user experience across various devices, specific scenarios an
 ## Credits
 
 ### Content
-All Content used is original content by the creator of Aurum Reborn
+- All Content used is original content by the creator of Aurum Reborn
 
 ### Media
 
