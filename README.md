@@ -402,6 +402,11 @@ To ensure a smooth user experience across various devices, specific scenarios an
 * <strong>Cause:</strong> The requirement was to redesign the mobile navigation to have all elements (burger icon, logo, search icon, profile icon, and shopping bag icon) on one line.
 * <strong>Solution:</strong> Restructure the HTML and use flexbox classes like d-flex, justify-content-between, and align-items-center to align the elements in a single line.
 
+---
+* <strong>Problem:</strong> Footer Logo Display
+* <strong>Cause:</strong> The footer logo image was not displaying on certain pages (e.g., product info page, edit product page, product management page) due to the incorrect path used for the image source (src) attribute in the template file.
+*<strong>Solution:</strong> Update the image source (src) attribute in the template file to point to the correct location of the footer logo image. Ensure that the correct relative path or absolute path is used to access the image from the project-level media directory. Verify that the image is accessible from the specific pages where it is intended to be displayed.
+
 
 ### Unresolved Issues
 
