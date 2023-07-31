@@ -29,6 +29,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 ALLOWED_HOSTS = ["8000-rebeccoder-aurumreborn-czcmzelrkan.ws-eu102.gitpod.io", "localhost"]
 
+DEBUG = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
