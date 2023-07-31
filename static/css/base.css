@@ -36,6 +36,10 @@ header {
   height: auto;
 }
 
+.collection-image {
+    width: 80%;
+    height: auto;
+}
 /* Delivery Banner and Close Button */
 .delivery-banner {
     font-family: 'Playfair', serif;

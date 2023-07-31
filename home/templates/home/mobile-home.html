@@ -1,21 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/mobile-home.css' %}">
-{% endblock %}
 
 {% block content %}
 
 <div class="container-fluid pt-5">
-    <img src="media/homepage-image.jpg" alt="Company Image" class="mobile-image">
+    <img src="{{ MEDIA_URL }}homepage-image.jpg" alt="Company Image" class="mobile-image">
     <h3 class="home-title">Handcrafted Gold, Ethically Recycled.<br> Adorning You with Timeless Beauty</h2>
     <p class="home-description">At Aurum Reborn, we are passionate about creating handcrafted gold jewellery that reflects your unique style. Our pieces are meticulously crafted with ethically sourced and recycled gold, ensuring sustainability and a commitment to the environment. Each piece tells a story, combining exquisite craftsmanship and a touch of luxury. Discover our collection and adorn yourself with timeless beauty.</p>
 </div>
 
 <div class="container-fluid pt-5">
     <div class="text-center">
-        <img src="media/our-collection.jpg" class="mobile-image" alt="collection Image">
+        <img src="{{ MEDIA_URL }}our-collection.jpg" class="mobile-image" alt="collection Image">
         <br>
         <a href="{% url 'products' %}" class="main-button">Discover Our Collections</a>
     </div>
@@ -27,7 +24,7 @@
 </div>
 
 <div class="container-fluid pt-5">
-    <img src="media/creators/amara-thompson.jpg" class="mobile-image">
+    <img src="{{ MEDIA_URL }}amara-thompson.jpg" class="mobile-image">
     <div class="text-center">
         <a href="{% url 'creators' %}" class="main-button">Meet Our Creators</a>
     </div>
@@ -46,7 +43,7 @@
         <div id="mc_embed_signup">
             <form action="https://icloud.us21.list-manage.com/subscribe/post?u=12661aa4185b3a77d383f2256&amp;id=115e4a4ea5&amp;f_id=002fd5e6f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate="">
                 <div class="newsletter-info"></div>
-                <img src="media/newsletter-image.jpg" alt="Newsletter Image" class="mobile-image">
+                <img src="{{ MEDIA_URL }}newsletter-image.jpg" alt="Newsletter Image" class="mobile-image">
                 <div id="mc_embed_signup_scroll">
                     <h2 class="home-title">Subscribe to Our Newsletter</h2>
                     <p class="home-description">Stay up to date with our latest collections, promotions, and news by subscribing to our newsletter.</p>
