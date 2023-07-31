@@ -516,6 +516,36 @@ header {
     color:#CDA3A3;
 }
 
+/* Shopping Bag */
+.bag-table thead{
+    color:#D4AF37;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: larger;
+}
+
+.bag-text {
+    font-family: 'Raleway', sans-serif;
+    color:#8B5A2B;
+}
+
+.bag-title {
+    font-family: 'Cormorant Garamond', serif;
+    color: #D4AF37
+}
+
+.bag-link {
+    color:#699C6B;
+    font-family: 'Playfair', serif;
+}
+
+.bag-link:hover {
+    color:#CDA3A3;
+}
+
+.grand-total {
+    color:#8B5A2B;
+    font-family: 'Playfair', serif;
+}
 
 /* Buttons */
 .btt-button {
