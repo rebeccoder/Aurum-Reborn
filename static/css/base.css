@@ -400,6 +400,16 @@ header {
     text-decoration: underline;
 }
 
+.testimonial-form {
+    max-width: 400px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #fffff0; 
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
 /* Product Section */
 .product-head {
     margin-top: 50px;
