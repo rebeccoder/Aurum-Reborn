@@ -484,6 +484,10 @@ header {
     color: #8B5A2B;
 }
 
+.btt-link:hover {
+    cursor: pointer;
+    color: #699C6B;
+}
 /* Styles for main button */
 
 .main-button {

@@ -38,6 +38,16 @@
     {% endblock %}
 
     {% block extra_js %}
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Scroll to top when "Return to Top" button is clicked
+        $('.btt-link').click(function(e) {
+          e.preventDefault();
+          $('html, body').animate({ scrollTop: 0 }, 'slow');
+        });
+      });
+    </script>
+
     <script>
       // JavaScript to handle the free delivery banner
       document.addEventListener("DOMContentLoaded", function() {
@@ -183,9 +193,14 @@
     {% endblock %}
 
     {% block content %}
-    {% endblock %}
 
-  {% block postloadjs %}
+    {% endblock %}
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+      <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+      </a>
+    </div>
+
     <footer class="footer">
         <div class="container">
           <div class="row">
@@ -218,27 +233,22 @@
         </div>
       </footer>
 
+      {% block postloadjs %}
     <script type="text/javascript">
       $('.toast').toast('show');
     </script>
 
     <script>
-        // Get the close button element
         const closeButton = document.querySelector('.close-btn');
       
-        // Get the delivery banner element
         const deliveryBanner = document.querySelector('.delivery-banner');
       
-        // Add an event listener to the close button
         closeButton.addEventListener('click', function() {
-          // Hide the delivery banner and close button
           deliveryBanner.style.display = 'none';
           closeButton.style.display = 'none';
         });
       </script>
-
-
-      
+    
       
     {% endblock %}
   </body>
