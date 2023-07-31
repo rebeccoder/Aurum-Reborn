@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-ALLOWED_HOSTS = ["8000-rebeccoder-aurumreborn-czcmzelrkan.ws-eu102.gitpod.io", "localhost"]
+ALLOWED_HOSTS = ["8000-rebeccoder-aurumreborn-czcmzelrkan.ws-eu102.gitpod.io", "localhost", "aurum-reborn-46fdfe47f435.herokuapp.com"]
 
 DEBUG = True
 
