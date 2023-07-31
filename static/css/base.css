@@ -65,6 +65,7 @@ header {
 }
 
 /* Navigation Icons and Search Icon */
+
 .nav-icons {
     color: #8B5A2B !important;
 }
@@ -80,6 +81,18 @@ header {
     font-family: 'Playfair Display', serif;
     transition: color 0.3s;
 }
+ 
+.dropdown-menu a{
+    color:#8B5A2B !important;
+    font-family: 'Playfair Display', serif;
+}
+
+.dropdown-menu a.nav-link:hover,
+.dropdown-menu a.nav-link:active,
+.dropdown-menu a.nav-link:focus {
+    color: #CDA3A3 !important;
+}
+
 
 /* Navbar Toggler */
 .navbar-toggler {
@@ -145,11 +158,11 @@ header {
 .toast-header {
     position: relative;
     padding: 0.75rem 1.25rem;
-    background-color: #699C6B;
-    color: #fff;
-  }
+    background-color: #FFFFF0;
+    color: #8B5A2B;
+}
   
-  .toast-header .close {
+.toast-header .close {
     position: absolute;
     top: 0;
     right: 0;
@@ -160,7 +173,13 @@ header {
     font-size: 1.5rem;
     line-height: 1;
     opacity: 0.8;
-  }
+    color:#699C6B;
+}
+
+.toast-body {
+    background-color: #FFFFF0;
+    color: #8B5A2B;
+}
 
 /* Footer Styles */
 .footer {
@@ -233,6 +252,12 @@ header {
 }
 
 /* Creator Section */
+.creator-home-name {
+    color:#699C6B;
+    font-family: 'Playfair', sans-serif;
+    text-align: center;
+
+}
 .creator-header {
     margin-top: 50px;
     margin-left: 50px;
@@ -519,18 +544,10 @@ header {
   .mobile-nav {
     background-color: #FFFFF0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    overflow-x: hidden; 
-  }
-  
+
+}
+
 
   .mobile-image {
     max-width: 100%;
