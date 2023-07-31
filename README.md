@@ -409,7 +409,7 @@ To ensure a smooth user experience across various devices, specific scenarios an
 
 
 ### Unresolved Issues
-
+- Couldn't get the delivery banner to stay closed once the close button had been pressed. It will on the page the users one but not if they navigate to another page.
 
 ## Deployment
 

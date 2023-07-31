@@ -468,6 +468,7 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-family: 'Playfair', serif
 }
+
 .category-tag {
     color: #CDA3A3;
     font-family: 'Playfair', serif;
@@ -488,6 +489,33 @@ header {
     background-color: #FFFFF0;
     border:none;
 }
+
+/* Profiles */
+.profile-text {
+    font-family: 'Raleway', sans-serif;
+    color:#8B5A2B;
+}
+
+.profile-form {
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-bottom: 30px;
+    background-color: #fffff0; 
+    color:#8B5A2B;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair', serif;
+}
+
+.profile-links {
+    font-family: 'Playfair', serif;
+    color:#699C6B
+}
+.profile-links:hover {
+    color:#CDA3A3;
+}
+
 
 /* Buttons */
 .btt-button {
@@ -544,8 +572,6 @@ header {
   background-color: #699C6B;
   color: #FFFFF0;
 }
-
-/* Styles for custom submit button */
 
 .custom-submit-button {
   display: inline-block;
@@ -612,6 +638,10 @@ header {
 
   .footer-links {
     text-align: center;
+  }
+
+  .delivery-banner {
+    font-size: smaller;
   }
 
   .product-head {

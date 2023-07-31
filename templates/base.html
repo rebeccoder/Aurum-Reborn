@@ -47,50 +47,6 @@
         });
       });
     </script>
-
-    <script>
-      // JavaScript to handle the free delivery banner
-      document.addEventListener("DOMContentLoaded", function() {
-          const bannerClosed = getCookie("bannerClosed");
-    
-          if (bannerClosed) {
-              const banner = document.getElementById("delivery-banner");
-              banner.style.display = "none";
-          }
-    
-          const closeButton = document.getElementById("close-banner");
-          closeButton.addEventListener("click", function() {
-              const banner = document.getElementById("delivery-banner");
-              banner.style.display = "none";
-    
-              setCookie("bannerClosed", "true", 30); // Set the cookie to expire after 30 days
-          });
-      });
-    
-      function setCookie(name, value, days) {
-          const date = new Date();
-          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-          const expires = "expires=" + date.toUTCString();
-          document.cookie = name + "=" + value + ";" + expires + ";path=/";
-      }
-    
-      function getCookie(name) {
-          const cookieName = name + "=";
-          const decodedCookie = decodeURIComponent(document.cookie);
-          const cookieArray = decodedCookie.split(";");
-    
-          for (let i = 0; i < cookieArray.length; i++) {
-              let cookie = cookieArray[i];
-              while (cookie.charAt(0) === " ") {
-                  cookie = cookie.substring(1);
-              }
-              if (cookie.indexOf(cookieName) === 0) {
-                  return cookie.substring(cookieName.length, cookie.length);
-              }
-          }
-          return null;
-      }
-      </script>
     {% endblock %}
 
     <title>AurumReborn {% block extra_title %}{% endblock %}</title>
