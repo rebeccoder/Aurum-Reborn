@@ -465,6 +465,16 @@ header {
     font-family: 'Playfair', serif;
 }
 
+.input-group {
+    color: khaki;
+    font-family: 'Lato', sans-serif
+}
+
+.increments {
+    color:#8B5A2B;
+    background-color: #FFFFF0;
+    border:none;
+}
 
 /* Buttons */
 .btt-button {
