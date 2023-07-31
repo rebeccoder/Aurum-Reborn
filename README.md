@@ -337,7 +337,10 @@ Incorporating a live chat system for customer care, enabling users to communicat
 
 ## Testing
 
-No automated testing has been used on this project, Instead all the testing has been done manually and through numerous user experiences.
+There was an issue that the Stripe Secret Key and other information had been commited to Github.
+These have since changed and are no longer relevant to the keys now used in the website.
+
+<strong> No automated testing has been used on this project, Instead all the testing has been done manually and through numerous user experiences. </strong>
 
 <strong> Navigation and Site Flow:</strong> Tested how easily users can navigate through the website, find products, and access different sections. Check if the site flow makes sense and is intuitive for users by navigating through all the pages and make sure all the links are working so that a user doesn't get stuck anywhere.
 
@@ -405,15 +408,24 @@ To ensure a smooth user experience across various devices, specific scenarios an
 ---
 * <strong>Problem:</strong> Footer Logo Display
 * <strong>Cause:</strong> The footer logo image was not displaying on certain pages (e.g., product info page, edit product page, product management page) due to the incorrect path used for the image source (src) attribute in the template file.
-*<strong>Solution:</strong> Update the image source (src) attribute in the template file to point to the correct location of the footer logo image. Ensure that the correct relative path or absolute path is used to access the image from the project-level media directory. Verify that the image is accessible from the specific pages where it is intended to be displayed.
+* <strong>Solution:</strong> Update the image source (src) attribute in the template file to point to the correct location of the footer logo image. Ensure that the correct relative path or absolute path is used to access the image from the project-level media directory. Verify that the image is accessible from the specific pages where it is intended to be displayed.
+
+---
+* <strong>Problem:</strong> Unexpected side scroll
+* <strong>Cause:</strong> A margin that was caused by using certain Bootstrap elements, namely the row elements without wrapping the 'container-fluid' class in a div.
+* <strong>Solution:</strong> After downloading the Chrome extension Pestiside I was able to find what element exactly was causing the margin. I looked into it on StackOverflow and found out more about the containers and rows and decided 'container-fluid' was the best option
+
+---
+
 
 
 ### Unresolved Issues
-- Couldn't get the delivery banner to stay closed once the close button had been pressed. It will on the page the users one but not if they navigate to another page.
+- Couldn't get the delivery banner to stay closed once the close button had been pressed. It will on the page the users on when exiting but not if they navigate to another. This will need to be fixed if going live as it causes an inconvenience to the user.
 
 ## Deployment
 
-### Deploying to Heroku
+- The final Deployed site can be found [here](https://aurum-reborn-46fdfe47f435.herokuapp.com//)
+- I have included details of my initial deployment in a separate document called [DEPLOYMENT.md](DEPLOYMENT.md).
 
 
 ## Credits
@@ -437,5 +449,6 @@ Images used on website were from:
 
 ### Acknowledgements
 
-- My mentor Richard Wells for all his wisdom
+- My mentor Richard Wells for all his wisdom!! Couldn't have done it without him! 
+
 - My parents for the support :)
