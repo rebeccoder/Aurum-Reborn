@@ -57,6 +57,7 @@
       <div id="delivery-banner" class="text-center">
             <h4 class="delivery-banner my-1">Free delivery on orders over £{{ free_delivery_threshold }}!<button id="close-banner" class="close-btn">x</button></h4>    
       </div>
+      <div class="container-fluid">
       <div id="topnav" class="row pt-lg-2 d-none d-lg-flex justify-content-between">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left desktop-nav">
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -118,8 +119,8 @@
         </div>
       </div>
     </div>
+  </div>
   
-      <div class="row">
         <nav class="navbar navbar-expand-lg navbar-light w-100">
           {% include 'includes/mobile-top-header.html' %}
           {% include 'includes/main-nav.html' %}
