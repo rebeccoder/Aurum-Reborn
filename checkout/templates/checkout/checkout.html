@@ -7,15 +7,12 @@
 
 
 {% block content %}
-    <div class="container-fluid">
         <div class="row">
             <div class="col">
                 <h2 class="logo-font mb-4">Checkout</h2>
                 <hr>
             </div>
-        </div>
 
-        <div class="container-fluid"></div>
         <div class="row">
             <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <p class="bag-title">Order Summary ({{ product_count }})</p>
@@ -27,8 +24,8 @@
                         <p class="mb-1 mt-0 small bag-title">Subtotal</p>
                     </div>
                 </div>
-        </div>
-        <div class= "container-fluid">
+
+
                 {% for item in bag_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
@@ -48,8 +45,8 @@
                             <p class="my-0 small bag-text"></p>
                         </div>
                     </div>
-        </div>
-        <div class="container-fluid">
+
+
                 {% endfor %}
                 <hr class="my-0">
                 <div class="row text-black text-right">
