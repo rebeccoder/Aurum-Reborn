@@ -457,7 +457,17 @@ header {
     opacity: 0.5;
 }
 
-/* Category Tag */
+.product-form {
+    margin: 0 auto; 
+    padding: 20px; 
+    margin-bottom: 30px;
+    background-color: #fffff0; 
+    color:#8B5A2B;
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair', serif
+}
 .category-tag {
     color: #CDA3A3;
     font-family: 'Playfair', serif;
