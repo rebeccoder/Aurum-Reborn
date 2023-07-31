@@ -384,10 +384,13 @@ header {
     max-width: 400px; 
     margin: 0 auto; 
     padding: 20px; 
+    margin-bottom: 30px;
     background-color: #fffff0; 
+    color:#8B5A2B;
     border: 1px solid #eaeaea;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Playfair', serif
 }
 
 /* Product Section */
@@ -556,7 +559,7 @@ header {
 
 
 /* Custom CSS for mobile navigation */
-@media (max-width: 767px) {
+@media (max-width: 991spx) {
 
   body {
     overflow-x: hidden;
@@ -576,7 +579,6 @@ header {
     align-items: center;
 
 }
-
 
   .mobile-image {
     max-width: 100%;
@@ -637,6 +639,7 @@ header {
   .testimonial-card {
     width: 100%;
   }
+}
 
   /* Slightly larger container on xl screens */
   @media (min-width: 1200px) {
@@ -658,5 +661,4 @@ header {
     .header-container {
       padding-top: 164px;
     }
-  }
 }

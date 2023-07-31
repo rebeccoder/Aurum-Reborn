@@ -19,8 +19,8 @@
       <p class="testimonial-rating">Rating: {{ testimonial.rating }}</p>
       {% if request.user == testimonial.user %}
       <div class="testimonial-links">
-        <a class="edit-link" href="{% url 'testimonials:testimonial_edit' testimonial.id %}">Edit</a>
-        <a class="delete-link" href="{% url 'testimonials:testimonial_delete' testimonial.id %}">Delete</a>
+        <a class="edit-button" href="{% url 'testimonials:testimonial_edit' testimonial.id %}">Edit</a>
+        <a class="delete-button" href="{% url 'testimonials:testimonial_delete' testimonial.id %}">Delete</a>
       </div>
       {% endif %}
     </div>
