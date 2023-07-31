@@ -308,26 +308,6 @@ header {
     margin-left: 2rem;
 }
 
-.creators-edit-button {
-    font-family: 'Playfair', serif;
-    color: #CDA3A3;
-    margin: 3px;
-}
-
-.creators-edit-button:hover {
-    color: #699C6B;
-}
-
-.creators-delete-button {
-    font-family: 'Playfair', serif;
-    color: #699C6B;
-    margin: 3px;
-}
-
-.creators-delete-button:hover {
-    color: #CDA3A3;
-}
-
 /* Testimonials Section */
 .testimonials-head {
     margin-top: 50px;
@@ -480,7 +460,13 @@ header {
     font-family: 'Playfair', serif;
 }
 
-/* Back to Top Button */
+.sort-by {
+    color: khaki;
+    font-family: 'Playfair', serif;
+}
+
+
+/* Buttons */
 .btt-button {
     height: 42px;
     width: 42px;
@@ -498,7 +484,26 @@ header {
     cursor: pointer;
     color: #699C6B;
 }
-/* Styles for main button */
+
+.edit-button {
+    font-family: 'Playfair', serif;
+    color: #CDA3A3;
+    margin: 3px;
+}
+
+.edit-button:hover {
+    color: #699C6B;
+}
+
+.delete-button {
+    font-family: 'Playfair', serif;
+    color: #699C6B;
+    margin: 3px;
+}
+
+.delete-button:hover {
+    color: #CDA3A3;
+}
 
 .main-button {
   display: inline-block;
