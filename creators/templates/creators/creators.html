@@ -37,12 +37,14 @@
         </div>
 
     {% if request.user.is_superuser %}
-    <div class="col-12 col-md-6 creators-buttons">
+    <div class="container-fluid">
+    <div class="creators-buttons">
         <a href="{% url 'creator_update' creator.pk %}" class="edit-button">Update creator</a>
         <a href="#" class="delete-button" onclick="event.preventDefault(); if(confirm('Are you sure you want to delete this creator?')) { document.getElementById('delete-form-{{ creator.pk }}').submit(); }">Delete creator</a>
         <form id="delete-form-{{ creator.pk }}" action="{% url 'creator_delete' creator.pk %}" method="POST" style="display: none;">
             {% csrf_token %}
         </form>
+    </div>
     </div>
     {% endif %} 
     </div>

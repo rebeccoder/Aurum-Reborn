@@ -625,16 +625,19 @@ header {
 
 
 /* Custom CSS for mobile navigation */
-@media (max-width: 991spx) {
+@media (max-width: 767px) {
 
   body {
     overflow-x: hidden;
   }
 
   .delivery-banner {
-    font-size: 18px;
+    font-size: 20px;
   }
 
+  .navbar {
+    flex-wrap: nowrap;
+  }
   .mobile-company-section {
     max-width: 100%;
   }
@@ -668,10 +671,6 @@ header {
 
   .footer-links {
     text-align: center;
-  }
-
-  .delivery-banner {
-    font-size: smaller;
   }
 
   .product-head {
@@ -711,6 +710,20 @@ header {
   }
 }
 
+@media (min-width: 768px) {
+    .fixed-top-desktop-only {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+    }
+  
+    .header-container {
+      padding-top: 164px;
+    }
+  }
+
   /* Slightly larger container on xl screens */
   @media (min-width: 1200px) {
     .container {
@@ -730,5 +743,11 @@ header {
 
     .header-container {
       padding-top: 164px;
+    }
+}
+
+@media (max-width: 280px) and (max-height: 653px) {
+    .mobile-logo {
+      display: none;
     }
 }
