@@ -4,7 +4,7 @@
 
 <div class="testimonials-head">
   <h1 class="testimonials-title">Testimonials</h1>
-  <img src="../media/testimonials-image.jpg" class="testimonials-image" alt="Testimonials Image"><br>
+  <img src="{{ MEDIA_URL }}testimonials-image.jpg" class="testimonials-image" alt="Testimonials Image"><br>
   {% if user.is_authenticated %}
   <a href="{% url 'testimonials:testimonial_create' %}" class="main-button">Add Testimonial</a>
   {% endif %}
@@ -26,7 +26,7 @@
     </div>
   </div>
   {% empty %}
-  <p>No testimonials yet.</p>
+  <p class="testimonial-text">No testimonials yet.</p>
   {% endfor %}
 </div>
 {% endblock %}
