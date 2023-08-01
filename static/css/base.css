@@ -341,10 +341,9 @@ header {
 }
 
 .testimonial-card {
-    background-color: #FFFFF0;
+    background-color: #ffffff;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 1px #8B5A2B;
     width: 45%;
     margin: 1rem;
 }
