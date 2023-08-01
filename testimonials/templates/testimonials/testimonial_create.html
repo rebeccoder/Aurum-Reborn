@@ -2,31 +2,30 @@
 {% load static %}
 
 {% block content %}
-  <div class="testimonials-head">
-    <h1 class="testimonials-title">Create Testimonial</h1>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <form method="POST" class="testimonial-form">
-        {% csrf_token %}
-        <div class="form-group">
-          <label for="title">Title:</label>
-          <input type="text" id="title" name="title" class="form-control" required>
-        </div>
-        <div class="form-group">
-          <label for="testimonial">Testimonial:</label>
-          <textarea id="testimonial" name="testimonial" class="form-control" rows="4" required></textarea>
-        </div>
-        <div class="form-group">
-          <label for="rating">Rating (out of 5):</label>
-          <input type="number" id="rating" name="rating" class="form-control" min="1" max="5" required>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="custom-submit-button space">Submit</button>
-          <a href="{% url 'testimonials:testimonial_list' %}" class="main-button space">Cancel</a>
-        </div>
-      </form>
-    </div>
+<div class="testimonials-head">
+  <h1 class="testimonials-title">Create Testimonial</h1>
+</div>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <form method="POST" class="testimonial-form">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="testimonial">Testimonial:</label>
+        <textarea id="testimonial" name="testimonial" class="form-control" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating (out of 5):</label>
+        <input type="number" id="rating" name="rating" class="form-control" min="1" max="5" required>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="custom-submit-button space">Submit</button>
+        <a href="{% url 'testimonials:testimonial_list' %}" class="main-button space">Cancel</a>
+      </div>
+    </form>
   </div>
 </div>
 {% endblock %}

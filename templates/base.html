@@ -1,209 +1,226 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
-  <head>
-    {% block meta %}
-    <meta http-equiv="X-UA-Compatible" content ="ie=edge">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    {% endblock %}
 
-    {% block extra_meta %}
-    {% endblock %}
+<head>
+  {% block meta %}
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {% endblock %}
 
-    {% block corecss %}
-    <link rel="stylesheet" href="{% static 'checkout/static/css/checkout.css' %}"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
-    
-    {% block extra_css %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Josefin+Sans&family=Montserrat&family=Playfair:wght@500&family=Raleway&display=swap" rel="stylesheet">
-    {% endblock %}
+  {% block extra_meta %}
+  {% endblock %}
 
-    {% block corejs %}
-    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://js.stripe.com/v3/"></script>
-    <script src="{% static 'checkout/static/js/stripe_elements.js' %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@2.3.2/dist/js/bootstrap.min.js"></script>
-    {% endblock %}
+  {% block corecss %}
+  <link rel="stylesheet" href="{% static 'checkout/static/css/checkout.css' %}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  {% endblock %}
+
+  {% block extra_css %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Josefin+Sans&family=Montserrat&family=Playfair:wght@500&family=Raleway&display=swap"
+    rel="stylesheet">
+  {% endblock %}
+
+  {% block corejs %}
+  <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+  </script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="{% static 'checkout/static/js/stripe_elements.js' %}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@2.3.2/dist/js/bootstrap.min.js"></script>
+  {% endblock %}
 
 
-    <title>AurumReborn {% block extra_title %}{% endblock %}</title>
-  </head>
+  <title>AurumReborn {% block extra_title %}{% endblock %}</title>
+</head>
 
-  <body>
-    <header>
-      <div id="delivery-banner" class="text-center">
-        <h4 class="delivery-banner my-1">Free delivery on orders over £{{ free_delivery_threshold }}!<button id="close-banner" class="close-btn">x</button></h4>    
-      </div>
-      <div class="container-fluid justify-content-center">
-        <div id="topnav" class="row pt-md-2 d-none d-md-flex justify-content-between">
-          <div class="col-12 col-md-4 my-auto py-1 py-md-0 text-center text-md-left desktop-nav">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
-              <h2 class="logo-font my-0 d-none d-md-block"><strong>Aurum</strong>Reborn</h2>
-            </a>
-          </div>
-          <div class="col-12 col-md-4 my-auto py-1 py-md-0 header-text">
-            <form method="GET" action="{% url 'products' %}">
-              <div class="input-group w-100 searchbar searchbar-mobile-hidden">
-                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our collections">
-                <div class="input-group-append">
-                  <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                    <span class="icon">
-                      <i class="fas fa-search"></i>
-                    </span>
-                  </button>
-                </div>
+<body>
+  <header>
+    <div id="delivery-banner" class="text-center">
+      <h4 class="delivery-banner my-1">Free delivery on orders over £{{ free_delivery_threshold }}!<button
+          id="close-banner" class="close-btn">x</button></h4>
+    </div>
+    <div class="container-fluid justify-content-center">
+      <div id="topnav" class="row pt-md-2 d-none d-md-flex justify-content-between">
+        <div class="col-12 col-md-4 my-auto py-1 py-md-0 text-center text-md-left desktop-nav">
+          <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <h2 class="logo-font my-0 d-none d-md-block"><strong>Aurum</strong>Reborn</h2>
+          </a>
+        </div>
+        <div class="col-12 col-md-4 my-auto py-1 py-md-0 header-text">
+          <form method="GET" action="{% url 'products' %}">
+            <div class="input-group w-100 searchbar searchbar-mobile-hidden">
+              <input class="form-control border border-black rounded-0" type="text" name="q"
+                placeholder="Search our collections">
+              <div class="input-group-append">
+                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                  <span class="icon">
+                    <i class="fas fa-search"></i>
+                  </span>
+                </button>
               </div>
-            </form>
-          </div>
-          <div class="col-12 col-md-4 my-auto py-1 py-md-0">
-            <ul class="list-inline list-unstyled text-center text-md-right my-0">
-              <li class="list-inline-item dropdown">
-                <!-- Font Awesome Icons -->
-                <a class="nav-link nav-icons-mobile-hidden" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <div class="text-center">
-                    <div><i class="fas fa-user fa-lg nav-icons"></i></div>
-                    <p class="my-0 nav-text">My Account</p>
-                  </div>
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                  {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                  <a href="{% url 'add_product' %}" class="dropdown-item nav-link">Product Management</a>
-                  {% endif %}
-                  <a href="{% url 'profile' %}" class="dropdown-item nav-link">My Profile</a>
-                  <a href="{% url 'account_logout' %}" class="dropdown-item nav-link">Logout</a>
-                  {% else %}
-                  <a href="{% url 'account_signup' %}" class="dropdown-item nav-link">Register</a>
-                  <a href="{% url 'account_login' %}" class="dropdown-item nav-link">Login</a>
-                  {% endif %}
+            </div>
+          </form>
+        </div>
+        <div class="col-12 col-md-4 my-auto py-1 py-md-0">
+          <ul class="list-inline list-unstyled text-center text-md-right my-0">
+            <li class="list-inline-item dropdown">
+              <!-- Font Awesome Icons -->
+              <a class="nav-link nav-icons-mobile-hidden" href="#" id="user-options" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                  <div><i class="fas fa-user fa-lg nav-icons"></i></div>
+                  <p class="my-0 nav-text">My Account</p>
                 </div>
-              </li>
-              <li class="list-inline-item">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link nav-icons-mobile-hidden" href="{% url 'view_bag' %}">
-                  <div class="text-center">
-                    <div><i class="fas fa-shopping-bag fa-lg nav-icons"></i></div>
-                    <p class="my-0 nav-text">
-                      {% if grand_total %}
-                      £{{ grand_total|floatformat:2 }}
-                      {% else %}
-                      £0.00
-                      {% endif %}
-                    </p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
+              </a>
+              <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <a href="{% url 'add_product' %}" class="dropdown-item nav-link">Product Management</a>
+                {% endif %}
+                <a href="{% url 'profile' %}" class="dropdown-item nav-link">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item nav-link">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item nav-link">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item nav-link">Login</a>
+                {% endif %}
+              </div>
+            </li>
+            <li class="list-inline-item">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link nav-icons-mobile-hidden"
+                href="{% url 'view_bag' %}">
+                <div class="text-center">
+                  <div><i class="fas fa-shopping-bag fa-lg nav-icons"></i></div>
+                  <p class="my-0 nav-text">
+                    {% if grand_total %}
+                    £{{ grand_total|floatformat:2 }}
+                    {% else %}
+                    £0.00
+                    {% endif %}
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-  
-  
-      <nav class="navbar navbar-expand-md navbar-light w-100">
-        {% include 'includes/mobile-top-header.html' %}
-        {% include 'includes/main-nav.html' %}
-      </nav>
-    </header>
-
-    {% if messages %}
-        <div class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </div>
-    {% endif %}
-
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-
-    {% endblock %}
-    <div class="btt-button shadow-sm rounded-0 border border-black">
-      <a class="btt-link d-flex h-100">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-      </a>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5">
-              <h5 class="footer-title">Follow Us</h5>
-              <ul class="social-icons">
-                <li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
-                <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
-              </ul>
-            </div>
-            <div class="col">
-              <div class="footer-links">
-                <a href="{% url 'careers' %}">Careers</a>
-                <a href="{% url 'returns' %}">Return Policy</a>
-                <a href="{% url 'terms' %}">Terms and Conditions</a>
-              </div>
-            </div>
-            <div class="col footer-logo">
-                <img src="{{ MEDIA_URL }}footer-logo.jpg" alt="Footer Logo" class="hover-image">
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-5">
-              <div class="copyright-text">
-                &copy; 2023 Aurum Reborn. All Rights Reserved.
-              </div>
-            </div>
+
+    <nav class="navbar navbar-expand-md navbar-light w-100">
+      {% include 'includes/mobile-top-header.html' %}
+      {% include 'includes/main-nav.html' %}
+    </nav>
+  </header>
+
+  {% if messages %}
+  <div class="message-container">
+    {% for message in messages %}
+    {% with message.level as level %}
+    {% if level == 40 %}
+    {% include 'includes/toasts/toast_error.html' %}
+    {% elif level == 30 %}
+    {% include 'includes/toasts/toast_warning.html' %}
+    {% elif level == 25 %}
+    {% include 'includes/toasts/toast_success.html' %}
+    {% else %}
+    {% include 'includes/toasts/toast_info.html' %}
+    {% endif %}
+    {% endwith %}
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% block page_header %}
+  {% endblock %}
+
+  {% block content %}
+
+  {% endblock %}
+  <div class="btt-button shadow-sm rounded-0 border border-black">
+    <a class="btt-link d-flex h-100">
+      <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <h5 class="footer-title">Follow Us</h5>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter fa-lg"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="footer-links">
+            <a href="{% url 'careers' %}">Careers</a>
+            <a href="{% url 'returns' %}">Return Policy</a>
+            <a href="{% url 'terms' %}">Terms and Conditions</a>
           </div>
         </div>
-      </footer>
+        <div class="col footer-logo">
+          <img src="{{ MEDIA_URL }}footer-logo.jpg" alt="Footer Logo" class="hover-image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <div class="copyright-text">
+            &copy; 2023 Aurum Reborn. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-      {% block postloadjs %}
-    <script type="text/javascript">
-      $('.toast').toast('show');
-    </script>
+  {% block postloadjs %}
+  <script type="text/javascript">
+    $('.toast').toast('show');
+  </script>
 
-    <script>
-        const closeButton = document.querySelector('.close-btn');
-      
-        const deliveryBanner = document.querySelector('.delivery-banner');
-      
-        closeButton.addEventListener('click', function() {
-          deliveryBanner.style.display = 'none';
-          closeButton.style.display = 'none';
-        });
-      </script>
-    
-    <script type="text/javascript">
-      $(document).ready(function() {
-        // Scroll to top when "Return to Top" button is clicked
-        $('.btt-link').click(function(e) {
-          e.preventDefault();
-          $('html, body').animate({ scrollTop: 0 }, 'slow');
-        });
+  <script>
+    const closeButton = document.querySelector('.close-btn');
+
+    const deliveryBanner = document.querySelector('.delivery-banner');
+
+    closeButton.addEventListener('click', function () {
+      deliveryBanner.style.display = 'none';
+      closeButton.style.display = 'none';
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      // Scroll to top when "Return to Top" button is clicked
+      $('.btt-link').click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: 0
+        }, 'slow');
       });
-    </script>
-      
-      {% endblock %}
-  </body>
+    });
+  </script>
+
+  {% endblock %}
+</body>
+
 </html>

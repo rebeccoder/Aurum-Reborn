@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -27,37 +27,38 @@
             </div>
 
             {% for item in bag_items %}
-                <div class="row">
-                    <div class="col-2 mb-1">
-                        <a class="bag-link" href="{% url 'product_detail' item.product.sku %}">
-                            {% if item.product.image %}
-                                <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
-                            {% else %}
-                                <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                            {% endif %}
-                        </a>
-                    </div>
-                    <div class="col-7">
-                        <p class="bag-text my-0"><strong>{{ item.product.friendly_name }}</strong></p>
-                        <p class="my-0 small bag-text">Qty: {{ item.quantity }}</p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="my-0 small bag-text"></p>
-                    </div>
+            <div class="row">
+                <div class="col-2 mb-1">
+                    <a class="bag-link" href="{% url 'product_detail' item.product.sku %}">
+                        {% if item.product.image %}
+                        <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                        {% else %}
+                        <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        {% endif %}
+                    </a>
                 </div>
+                <div class="col-7">
+                    <p class="bag-text my-0"><strong>{{ item.product.friendly_name }}</strong></p>
+                    <p class="my-0 small bag-text">Qty: {{ item.quantity }}</p>
+                </div>
+                <div class="col-3 text-right">
+                    <p class="my-0 small bag-text"></p>
+                </div>
+            </div>
             {% endfor %}
 
             <hr class="my-0">
-            <div class="row text-black text-right">
+            <div class="row text-right">
                 <div class="col-7 offset-2">
+                    <br>
                     <h6 class="my-0 bag-text">Order Total:</h6>
                     <h6 class="my-0 bag-text">Delivery:</h6>
-                    <h4 class="grnt-total my-0">Grand Total:</p>
+                    <h4 class="grand-total my-0">Grand Total:</h4>
                 </div>
                 <div class="col-3">
-                    <h6 class= "bag-text my-0">£{{ total | floatformat:2 }}</h6>
-                    <h6 class= "bag-text my-0">£{{ delivery | floatformat:2 }}</h6>
-                    <h4 class="grand-total my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                    <h6 class="bag-text my-0">£{{ total | floatformat:2 }}</h6>
+                    <h6 class="bag-text my-0">£{{ delivery | floatformat:2 }}</h6>
+                    <h4 class="grand-total my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></h4>
                 </div>
             </div>
         </div>
@@ -82,13 +83,15 @@
                     {{ order_form.county | as_crispy_field }}
                     <div class="form-check form-check-inline float-right mr-0">
                         {% if user.is_authenticated %}
-                            <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                        <label class="form-check-label" for="id-save-info">Save this delivery information to my
+                            profile</label>
+                        <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info"
+                            checked>
                         {% else %}
-                            <label class="form-check-label" for="id-save-info">
-                                <a class="bag-link" href="{% url 'account_signup' %}">Create an account</a> or 
-                                <a class="bag-link" href="{% url 'account_login' %}">login</a> to save this information
-                            </label>
+                        <label class="form-check-label" for="id-save-info">
+                            <a class="bag-link" href="{% url 'account_signup' %}">Create an account</a> or
+                            <a class="bag-link" href="{% url 'account_login' %}">login</a> to save this information
+                        </label>
                         {% endif %}
                     </div>
                 </fieldset>
@@ -102,7 +105,7 @@
                     <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </fieldset>
 
-                <div class="submit-button text-right mt-5 mb-2">                    
+                <div class="submit-button text-right mt-5 mb-2">
                     <a href="{% url 'view_bag' %}" class="bag-link">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
@@ -129,8 +132,8 @@
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{{ block.super }}
+{{ stripe_public_key|json_script:"id_stripe_public_key" }}
+{{ client_secret|json_script:"id_client_secret" }}
+<script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
