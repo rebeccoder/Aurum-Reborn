@@ -28,7 +28,11 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-ALLOWED_HOSTS = ["8000-rebeccoder-aurumreborn-czcmzelrkan.ws-eu102.gitpod.io", "localhost", "aurum-reborn-46fdfe47f435.herokuapp.com"]
+ALLOWED_HOSTS = [
+    "8000-rebeccoder-aurumreborn-czcmzelrkan.ws-eu102.gitpod.io",
+    "localhost",
+    "aurum-reborn-46fdfe47f435.herokuapp.com"
+]
 
 DEBUG = True
 
@@ -82,7 +86,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                'django.template.context_processors.request',  # required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
@@ -196,15 +200,15 @@ if 'USE_AWS' in os.environ:
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
-    
+
 
 FREE_DELIVERY_THRESHOLD = 100
 STANDARD_DELIVERY_PERCENTAGE = 5
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STRIPE_CURRENCY = 'gbp'
-STRIPE_PUBLIC_KEY =  os.environ.get('STRIPE_PUBLIC_KEY')
-STRIPE_SECRET_KEY =  os.environ.get('STRIPE_SECRET_KEY')
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
 
 if 'DEVELOPMENT' in os.environ:

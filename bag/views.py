@@ -1,17 +1,15 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
-
 from products.models import Product
 
 
 def view_bag(request):
     """ A view that renders the bag contents page """
-
     return render(request, 'bag/bag.html')
+
 
 def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
-
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -22,7 +20,7 @@ def add_to_bag(request, item_id):
         messages.success(request, f'Updated {product.friendly_name} quantity to {bag[item_id]}')
     else:
         bag[item_id] = quantity
-        messages.success(request, f'Added {product.friendly_name} to your bag')  # This sets the success message.
+        messages.success(request, f'Added {product.friendly_name} to your bag')
 
     request.session['bag'] = bag
     return redirect(redirect_url)
@@ -30,7 +28,6 @@ def add_to_bag(request, item_id):
 
 def adjust_bag(request, item_id):
     """Adjust the quantity of the specified product to the specified amount"""
-
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
@@ -48,13 +45,11 @@ def adjust_bag(request, item_id):
 
 def remove_from_bag(request, item_id):
     """Remove the item from the shopping bag"""
-
     product = get_object_or_404(Product, pk=item_id)
     try:
         bag = request.session.get('bag', {})
         bag.pop(item_id, None)
         messages.success(request, f'Removed {product.friendly_name} from your bag')
-
         request.session['bag'] = bag
         return HttpResponse(status=200)
 

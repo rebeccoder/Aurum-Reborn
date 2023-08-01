@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import Product, Category, Creator
+
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['name', 'category', 'price', 'karat', 'creator']
@@ -8,12 +10,15 @@ class ProductAdmin(admin.ModelAdmin):
 
     fieldsets = (
         ('Product Information', {
-            'fields': ('sku', 'category', 'name', 'friendly_name', 'description', 'price', 'karat', 'creator')
+            'fields':
+                ('sku', 'category', 'name', 'friendly_name', 'description',
+                 'price', 'karat', 'creator')
         }),
         ('Image', {
             'fields': ('image',),
         }),
     )
+
 
 @admin.register(Category)
 class CategoriesAdmin(admin.ModelAdmin):

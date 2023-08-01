@@ -11,7 +11,6 @@ from .forms import CreatorsForm
 from .models import Creator
 
 
-
 class Creators(generic.ListView):
     """
     A view to return the list of creators.
@@ -22,7 +21,8 @@ class Creators(generic.ListView):
     template_name = "creators/creators.html"
 
 
-class CreateCreator(UserPassesTestMixin, SuccessMessageMixin, generic.CreateView):
+class CreateCreator(UserPassesTestMixin,
+                    SuccessMessageMixin, generic.CreateView):
     """
     A view to display the creator form.
     To add new creators. Restricted to superusers only.
@@ -43,7 +43,8 @@ class CreateCreator(UserPassesTestMixin, SuccessMessageMixin, generic.CreateView
         """
         If the user is not a superuser, display a toast message.
         """
-        messages.error(self.request, "You need proper authorization to do that.")
+        messages.error(self.request,
+                       "You need proper authorization to do that.")
         return redirect("home")
 
     def form_invalid(self, form):
@@ -51,12 +52,14 @@ class CreateCreator(UserPassesTestMixin, SuccessMessageMixin, generic.CreateView
         Show toast error message if the form is invalid.
         """
         messages.error(
-            self.request, "Oops, something went wrong! Please double-check the form."
+            self.request,
+            "Oops, something went wrong! Please double-check the form."
         )
         return super().form_invalid(form)
 
 
-class UpdateCreator(UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView):
+class UpdateCreator(UserPassesTestMixin,
+                    SuccessMessageMixin, generic.UpdateView):
     """
     A view to display the creator form.
     To update creators. Restricted to superusers only.
@@ -77,10 +80,13 @@ class UpdateCreator(UserPassesTestMixin, SuccessMessageMixin, generic.UpdateView
         """
         If the user is not a superuser, display a toast message.
         """
-        messages.error(self.request, "You need proper authorization to do that.")
+        messages.error(self.request,
+                       "You need proper authorization to do that.")
         return redirect("home")
 
-class CreatorDeleteView(UserPassesTestMixin, SuccessMessageMixin, generic.DeleteView):
+
+class CreatorDeleteView(UserPassesTestMixin,
+                        SuccessMessageMixin, generic.DeleteView):
     """
     A view to delete a creator. Restricted to superusers only.
     """
@@ -99,7 +105,8 @@ class CreatorDeleteView(UserPassesTestMixin, SuccessMessageMixin, generic.Delete
         """
         If the user is not a superuser, display a toast message.
         """
-        messages.error(self.request, "You need proper authorization to do that.")
+        messages.error(self.request,
+                       "You need proper authorization to do that.")
         return redirect("home")
 
     def delete(self, request, *args, **kwargs):
@@ -112,7 +119,7 @@ class CreatorDeleteView(UserPassesTestMixin, SuccessMessageMixin, generic.Delete
         self.object.delete()
         return redirect("creators")
 
-        
+
 class CreatorsFormView(CreateView):
     model = Creator
     form_class = CreatorsForm
