@@ -688,6 +688,8 @@ header {
 
     .navbar {
         flex-wrap: nowrap;
+        padding: 0px;
+        display: flow;
     }
 
     .mobile-company-section {

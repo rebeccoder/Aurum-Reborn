@@ -7,11 +7,11 @@
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class=" font-weight-bold nav-link nav-text mr-5" href="" id="collections-link" data-toggle="dropdown"
+            <a class="font-weight-bold nav-link nav-text mr-5" href="" id="collections-link" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Our Collections
             </a>
-            <div class="dropdown-menu border-0 nav-text" aria-labelledby="collections-link">
+            <div class="dropdown-menu border-0 nav-text dropdown-menu-right" aria-labelledby="collections-link">
                 <a href="{% url 'products' %}" class="dropdown-item nav-text">All Items</a>
                 <a href="{% url 'products' %}?category=Earrings" class="dropdown-item nav-text">Earrings</a>
                 <a href="{% url 'products' %}?category=Necklaces" class="dropdown-item nav-text">Necklaces</a>
@@ -19,14 +19,12 @@
                 <a href="{% url 'products' %}?category=Rings" class="dropdown-item nav-text">Rings</a>
             </div>
         </li>
-
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link nav-text mr-5" href="{% url 'creators' %}" id="creators-link"
                 aria-haspopup="true" aria-expanded="false">
                 Creators
             </a>
         </li>
-
         <li class="nav-item dropdown">
             <a class="font-weight-bold nav-link nav-text mr-5" href="{% url 'testimonials:testimonial_list' %}"
                 id="testimonials-link" aria-haspopup="true" aria-expanded="false">
