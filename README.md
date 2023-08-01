@@ -1,5 +1,9 @@
 # Aurum Reborn
 
+
+[LIVE SITE](https://aurum-reborn-46fdfe47f435.herokuapp.com/)
+
+
 Welcome to Aurum Reborn - An Elegant Jewelry Website!
 
 Aurum Reborn is an elegant online jewelry store, showcasing ethically sourced gold jewelry. This website serves as my portfolio project, demonstrating my skills and passion for web development and design.
@@ -334,6 +338,15 @@ Incorporating a live chat system for customer care, enabling users to communicat
 - [Heroku](https://www.heroku.com)
 - [Git](https://git-scm.com/)
 - [Postgres](https://www.postgresql.org/)
+- [MailChimp](https://mailchimp.com/)
+- [jQuery](https://jquery.com/)
+- [FontAwesome](https://fontawesome.com/icons)
+- [Pip] (https://pypi.org/project/pip/)
+- [HTML Validator](validator.w3.org)
+- [CSS](jigswa.w3.org)
+- [CIPEP8](https://pep8ci.herokuapp.com/#)
+
+
 
 ## Testing
 
