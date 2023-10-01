@@ -154,10 +154,9 @@ header {
 .toast {
     background-color: #FFFFF0;
     color: #8B5A2B;
-    padding: 12px;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    float: right;
+    position: absolute;
+    right: 0;
+    z-index: 1;
 }
 
 .toast-header {
