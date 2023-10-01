@@ -44,14 +44,14 @@ header {
 /* Delivery Banner and Close Button */
 .delivery-banner {
     font-family: 'Playfair', serif;
-    background-color: #CDA3A3;
+    background-color: #8a3d3d;
     color: #FFFFF0;
 }
 
 .close-btn {
     position: absolute;
     right: 10px;
-    background-color: #CDA3A3;
+    background-color: #8a3d3d;
     color: #FFFFF0;
     font-family: 'Playfair Display', serif;
     border: none;
@@ -95,7 +95,7 @@ header {
 .dropdown-menu a.nav-link:hover,
 .dropdown-menu a.nav-link:active,
 .dropdown-menu a.nav-link:focus {
-    color: #CDA3A3 !important;
+    color: #8a3d3d !important;
 }
 
 
@@ -109,7 +109,7 @@ header {
 .nav-link.nav-icons:active,
 .nav-link.nav-icons:focus,
 .nav-text.nav-link:hover {
-    color: #CDA3A3 !important;
+    color: #8a3d3d !important;
 }
 
 /* Company Section and Info */
@@ -126,7 +126,7 @@ header {
 
 .home-title {
     font-size: 24px;
-    color: #D4AF37;
+    color: #816a23;
     font-family: 'Cormorant Garamond', serif;
     margin-bottom: 20px;
     font-weight: bold;
@@ -178,7 +178,7 @@ header {
     font-size: 1.5rem;
     line-height: 1;
     opacity: 0.8;
-    color: #699C6B;
+    color: #3e563f;
 }
 
 .toast-body {
@@ -222,7 +222,7 @@ header {
 }
 
 .social-icons a:hover {
-    color: #CDA3A3;
+    color: #8a3d3d;
 }
 
 .footer-links {
@@ -238,7 +238,7 @@ header {
 }
 
 .footer-links a:hover {
-    color: #CDA3A3;
+    color: #8a3d3d;
 }
 
 .footer-logo {
@@ -253,12 +253,12 @@ header {
 .copyright-text {
     font-size: 14px;
     text-align: center;
-    color: #D4AF37;
+    color: #816a23;
 }
 
 /* Creator Section */
 .creator-home-name {
-    color: #699C6B;
+    color: #3e563f;
     font-family: 'Playfair', sans-serif;
     text-align: center;
 
@@ -289,7 +289,7 @@ header {
 }
 
 .text-secondary {
-    color: #D4AF37 !important;
+    color: #816a23 !important;
 }
 
 .creators-bio {
@@ -303,11 +303,11 @@ header {
 }
 
 .creators-website a {
-    color: #699C6B;
+    color: #3e563f;
 }
 
 .creators-website a:hover {
-    color: #CDA3A3;
+    color: #8a3d3d;
 }
 
 .creators-buttons {
@@ -416,12 +416,12 @@ header {
 }
 
 .product-details-name {
-    color: #D4AF37;
+    color: #816a23;
     font-family: 'Playfair', serif;
 }
 
 .product-prices {
-    color: #D4AF37;
+    color: #816a23;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -431,13 +431,13 @@ header {
 }
 
 .product-price {
-    color: #D4AF37;
+    color: #816a23;
     font-family: 'Playfair', serif;
     font-size: 1.5em;
 }
 
 .product-karat {
-    color: #D4AF37;
+    color: #816a23;
     font-family: 'Playfair', serif;
     font-size: 1.5em;
 }
@@ -449,13 +449,9 @@ header {
 
 .product-divider {
     border: none;
-    /* Remove the default border */
     height: 1px;
-    /* Set the height of the horizontal line */
-    background-color: #CDA3A3;
-    /* Set the background color of the line */
+    background-color: #8a3d3d;
     margin: 20px 0;
-    /* Add some margin around the line */
 }
 
 .product-link {
@@ -479,7 +475,7 @@ header {
 }
 
 .category-tag {
-    color: #CDA3A3;
+    color: #8a3d3d;
     font-family: 'Playfair', serif;
 }
 
@@ -519,16 +515,16 @@ header {
 
 .profile-links {
     font-family: 'Playfair', serif;
-    color: #699C6B
+    color: #3e563f
 }
 
 .profile-links:hover {
-    color: #CDA3A3;
+    color: #8a3d3d;
 }
 
 /* Shopping Bag */
 .bag-table thead {
-    color: #D4AF37;
+    color: #816a23;
     font-family: 'Cormorant Garamond', serif;
     font-size: larger;
 }
@@ -540,16 +536,16 @@ header {
 
 .bag-title {
     font-family: 'Cormorant Garamond', serif;
-    color: #D4AF37
+    color: #816a23;
 }
 
 .bag-link {
-    color: #699C6B;
+    color: #3e563f;
     font-family: 'Playfair', serif;
 }
 
 .bag-link:hover {
-    color: #CDA3A3;
+    color: #8a3d3d;
 }
 
 .grand-total {
@@ -614,27 +610,27 @@ header {
 
 .btt-link:hover {
     cursor: pointer;
-    color: #699C6B;
+    color: #3e563f;
 }
 
 .edit-button {
     font-family: 'Playfair', serif;
-    color: #CDA3A3;
+    color: #8a3d3d;
     margin: 3px;
 }
 
 .edit-button:hover {
-    color: #699C6B;
+    color: #3e563f;
 }
 
 .delete-button {
     font-family: 'Playfair', serif;
-    color: #699C6B;
+    color: #3e563f;
     margin: 3px;
 }
 
 .delete-button:hover {
-    color: #CDA3A3;
+    color: #8a3d3d;
 }
 
 .main-button {
@@ -645,12 +641,12 @@ header {
     font-family: 'Playfair', sans-serif;
     padding: 5px;
     text-decoration: none;
-    transition: background-color 0.3s;
+    transition: 0.3s;
     margin: 5px;
 }
 
 .main-button:hover {
-    background-color: #699C6B;
+    background-color: #3e563f;
     color: #FFFFF0;
 }
 
@@ -668,8 +664,8 @@ header {
 }
 
 .custom-submit-button:hover {
-    background-color: #699C6B;
-    border-color: #699C6B;
+    background-color: #3e563f;
+    border-color: #3e563f;
     color: #FFFFF0;
     text-underline-position: under;
 }

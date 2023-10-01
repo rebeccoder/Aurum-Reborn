@@ -31,7 +31,7 @@ DEBUG = True
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 ALLOWED_HOSTS = [
-    "8000-rebeccoder-aurumreborn-czcmzelrkan.ws-eu104.gitpod.io",
+    "8000-rebeccoder-aurumreborn-czcmzelrkan.ws-eu105.gitpod.io",
     "localhost",
     "aurum-reborn-46fdfe47f435.herokuapp.com"
 ]
