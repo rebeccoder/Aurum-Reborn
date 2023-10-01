@@ -21,11 +21,10 @@ Thank you for visiting Aurum Reborn. Feel free to reach out with any feedback or
     - [Wireframes](#wireframes)
 
 2. [Features](#features)
-    - [Existing Features](#exisiting-features)
+    - [Existing Features](#existing-features)
     - [Future Goals](#future-goals)
 
 3. [Information Architecture](#information-architecture)
-    - [Database Choice](#database-choice)
     - [Data Storage](#data-storage)
 
 4. [Technology Used](#technology-used)
@@ -341,9 +340,9 @@ Incorporating a live chat system for customer care, enabling users to communicat
 - [MailChimp](https://mailchimp.com/)
 - [jQuery](https://jquery.com/)
 - [FontAwesome](https://fontawesome.com/icons)
-- [Pip] (https://pypi.org/project/pip/)
-- [HTML Validator](validator.w3.org)
-- [CSS](jigswa.w3.org)
+- [Pip](https://pypi.org/project/pip/)
+- [HTML Validator](https://validator.w3.org/)
+- [CSS](https://jigsaw.w3.org/css-validator/)
 - [CIPEP8](https://pep8ci.herokuapp.com/#)
 
 
@@ -464,4 +463,3 @@ Images used on website were from:
 
 - My mentor Richard Wells for all his wisdom!! Couldn't have done it without him! 
 
-- My parents for the support :)
